@@ -19,8 +19,8 @@ module.exports = {
         sm : "480px",
         md : "768px",
         //pc or laptop small - large
-        lg : "1024px",
-        xl : "1280px",
+        lg : "1024px", //kebanyakan laptop segini
+        xl : "1280px", //laptop gg 1496 
       },
       boxShadow: {
         'below': '0 4px 6px rgba(0, 0, 0, 0.1)', // Shadow hanya di bawah

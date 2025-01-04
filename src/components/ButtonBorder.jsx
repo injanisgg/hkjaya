@@ -1,8 +1,10 @@
 import React from 'react'
 
-function ButtonBorder({btnText}) {
+function ButtonBorder({btnText, linkTo}) {
   return (
-    <button className='border-solid border-2 border-gray-400 py-2 px-1 bg-white w-44 text-sm rounded-xl'>{btnText}</button>
+    <a href={linkTo}>
+      <button className='border-solid border-2 border-gray-400 py-2 px-1 bg-white w-44 text-sm rounded-xl'>{btnText}</button>
+    </a>
   )
 }
 

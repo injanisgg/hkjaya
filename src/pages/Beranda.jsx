@@ -22,7 +22,7 @@ function Beranda() {
       alt={'Main Header Picture'}
       textTop={'Swalayan Alat Tulis'}
       textBottom={'Semua Ada Semua Murah'}
-      CustomButton={() => <ButtonBorder btnText={'Kunjungi Sekarang'}/>}
+      CustomButton={() => <ButtonBorder btnText={'Kunjungi Sekarang'} linkTo={'https://maps.app.goo.gl/UyTpzhtbTNxCySai8'}/>}
       />
       {/* slogan content */}
       <div className='py-5 bg-slate-50'>
