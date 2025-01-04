@@ -24,7 +24,7 @@ function Footer() {
                     </div>
                     <div className='flex gap-2 items-center hover:cursor-pointer hover:underline'>
                         <i class="fa-brands fa-tiktok"></i>
-                        <a href="https://instagram.com/hkjayastationery">@hkjayastationery</a>
+                        <a href="https://instagram.com/hkjayastationery">@hk.jaya.stationery</a>
                     </div>
                     <div className='flex gap-2 items-center hover:cursor-pointer hover:underline'>
                         <i class="fa-solid fa-location-dot"></i>

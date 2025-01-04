@@ -5,7 +5,7 @@ import AlatSeni from "../pages/AlatSeni";
 import Atk from "../pages/Atk";
 import Kertas from '../pages/Kertas';
 import Peralatan from '../pages/Peralatan';
-import DetailProduk from "../components/DetailProduk";
+import DetailProduk from "../pages/DetailProduk";
 
 const router = createBrowserRouter([
     {

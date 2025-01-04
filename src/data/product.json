@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "category": "Alat seni",
+        "subcategory": "Cat lukis",
+        "title": "Cat acrylic",
+        "variety" : ["Acryclic neon", "Acrylic metallic"],
+        "merk": ["Eds On", "V Tro", "Trifelo", "Enter", "Asturo", "V Tech", "Maries"],
+        "price": [9.000, 10.000, 20.000, 22.500, 31.000] ,
+        "image": "",
+        "description": "",
+        "color": "Semua warna",
+        "size": ["Full tube", "1 tube"]
+    }
+]

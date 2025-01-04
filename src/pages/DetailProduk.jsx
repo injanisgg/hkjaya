@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import DetailImg from '../img/detail.jpg'
 
 function DetailProduk() {
@@ -8,6 +8,7 @@ function DetailProduk() {
     <div>
       <Navbar />
       <button className='w-max py-3 px-4 rounded-full bg-white hover:border-2 border-primary-blue fixed left-8 z-10'><i className="fa-solid fa-arrow-left"></i></button>
+      {/* content detail */}
       <div>
         <div className="flex mt-32 gap-20">
             <div className="relative">
@@ -20,7 +21,7 @@ function DetailProduk() {
                 <p className="w-[33rem] text-sm text-justify">
                 *Harga yang tertera adalah rentang harga dari  produk ini. Anda bisa mengetahui harga aslinya dengan datang ke toko ATK HK JAYA</p>
                 <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center">
-                    <span>Detail Product</span>
+                    <span>Spesifikasi Produk</span>
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
                 <div className='border-b-96 border border-primary-blue rounded-full'></div>
@@ -31,8 +32,51 @@ function DetailProduk() {
                 <div className='border-b-96 border border-primary-blue rounded-full'></div>
             </div>
         </div>
-      </div>      
-      {/* <Footer /> */}
+      </div>  
+      {/* end content detail */}
+
+      {/* produk spesification */}
+      <div className="ml-40 my-20 mr-28 flex flex-col gap-3">
+        <h1 className='text-xl text-primary-blue font-bold text-left'>Spesifikasi Produk</h1>
+        <div>
+          <div className="flex justify-between py-2">
+            <p className='font-bold text-sm'>MERK:</p>
+            <p className='text-sm'>Joyko, Fabercastel</p>
+          </div>
+          <div className='border-b-80 border border-slate-300 rounded-full mb-2'></div>
+        </div>
+        <div>
+          <div className="flex justify-between py-2">
+            <p className='font-bold text-sm'>Harga:</p>
+            <p className='text-sm'>Joyko, Fabercastel</p>
+          </div>
+          <div className='border-b-80 border border-slate-300 rounded-full mb-2'></div>
+        </div>
+        <div>
+          <div className="flex justify-between py-2">
+            <p className='font-bold text-sm'>Varian:</p>
+            <p className='text-sm'>Joyko, Fabercastel</p>
+          </div>
+          <div className='border-b-80 border border-slate-300 rounded-full mb-2'></div>
+        </div>
+        <div>
+          <div className="flex justify-between py-2">
+            <p className='font-bold text-sm'>Warna:</p>
+            <p className='text-sm'>Joyko, Fabercastel</p>
+          </div>
+          <div className='border-b-80 border border-slate-300 rounded-full mb-2'></div>
+        </div>
+        <div>
+          <div className="flex justify-between py-2">
+            <p className='font-bold text-sm'>Ukuran:</p>
+            <p className='text-sm'>Joyko, Fabercastel</p>
+          </div>
+          <div className='border-b-80 border border-slate-300 rounded-full mb-2'></div>
+        </div>
+      </div>
+      {/* end produk spesification */}
+
+      <Footer />
     </div>
   )
 }
