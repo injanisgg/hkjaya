@@ -4,7 +4,7 @@ import Filters from './Filters'
 
 function Produk({title, arrayProduk}) {
   return (
-    <div>
+    <div className='mb-20'>
         {/* title */}
         <h1 className='text-2xl font-bold text-center py-5'>{title}</h1>
         {/* end title */}
@@ -22,6 +22,7 @@ function Produk({title, arrayProduk}) {
             <div className="flex flex-col hover:cursor-pointer gap-2 text-left">
                 <img src={AlatSeni} alt="Gambar slogan 1" className='xl:w-52 rounded-xl'/>
                 <p className='font-bold text-lg'>Kanvas</p>
+                <p className='text-xs text-white px-2 py-1 rounded-full w-max bg-red-600'>Joyko</p>
                 <p className='xl:w-52 text-sm'>Macam-macam akrilik, akrilik yang bermacam-macam, jenis jenis yang banyak.</p>
                 <p className='font-bold text-lg'>Rp. 8k - 12k</p>
                 <button className='rounded-xl bg-primary-blue text-sm text-white xl:w-52 py-2'>Lihat Produk</button>
