@@ -6,14 +6,14 @@ function Produk({title, arrayProduk}) {
   return (
     <div className='mb-20'>
         {/* title */}
-        <h1 className='text-2xl font-bold text-center py-5'>{title}</h1>
+        <h1 className='text-2xl font-bold text-center py-5 z-20 sticky top-20 w-full bg-white shadow-above'>{title}</h1>
         {/* end title */}
 
         <div className="flex gap-5 mx-20">
           {/* filter */}
           <div className="flex flex-col gap-5">
-            <Filters />
-            <Filters />
+            <Filters title={'Kategori'}/>
+            <Filters title={'Merk'}/>
           </div>
           {/* end filter */}
 

@@ -27,7 +27,7 @@ function Beranda() {
       {/* slogan content */}
       <div className='py-5 bg-slate-50'>
         <div className="flex flex-col gap-5 text-center">
-            <h1 className='text-2xl font-bold'>HK JAYA ATK</h1>
+            <h1 className='text-2xl font-bold'>ATK HK JAYA</h1>
             <p className='tex-lg'>Menyediakan Alat Tulis Kantor Semua Ada Semua Murah</p>
         </div>
         <div className='flex justify-around my-5'>
