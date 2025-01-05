@@ -8,7 +8,7 @@ function Navbar() {
     <div className='px-4'>
       <div className="fixed top-0 left-0 right-0 z-20">
         <div className="py-2 bg-white shadow-below">
-            <nav className='flex items-center justify-around font-bold'>
+            <nav className='flex items-center justify-around'>
                 <div><img src={NavLogo} alt="Logo ATK HK Jaya" className='w-16'/></div>
                 <NavLink to='/' className={({ isActive }) => isActive? 'hover: underline active font-bold': 'hover:underline'}>Beranda</NavLink>
                 <NavLink to='/alatSeni' className={({ isActive }) => isActive? 'hover: underline active font-bold': 'hover:underline'}>Alat Seni</NavLink>
