@@ -72,7 +72,7 @@ function Footer() {
             </div>
         </div>
         <div className='w-full h-16 bg-primary-blue flex justify-between px-20 py-8 text-white items-center'>
-            <p>&#169; 2025 Sugini Injani.</p>
+            <p>&#169; Copyright Sugini Injani 2025. All Right Reserved</p>
             <div className="flex items-center gap-4">
                 <p>Kami menerima pembayaran dengan</p>
                 <div className="flex flex-col text-center">

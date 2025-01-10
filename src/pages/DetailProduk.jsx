@@ -54,13 +54,6 @@ function DetailProduk() {
         </div>
         <div>
           <div className="flex justify-between py-2">
-            <p className='font-bold text-sm'>Varian:</p>
-            <p className='text-sm'>Joyko, Fabercastel</p>
-          </div>
-          <div className='border-b-80 border border-slate-300 rounded-full mb-2'></div>
-        </div>
-        <div>
-          <div className="flex justify-between py-2">
             <p className='font-bold text-sm'>Warna:</p>
             <p className='text-sm'>Joyko, Fabercastel</p>
           </div>
