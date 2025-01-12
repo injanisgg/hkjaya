@@ -1,6 +1,7 @@
 import React from 'react'
 import AlatSeni from '../img/home/alat-seni.jpg'
 import Filters from './Filters'
+import ComingSoon from '../img/comingsoon.png'
 
 function Produk({title, arrayProduk}) {
   return (
@@ -21,7 +22,7 @@ function Produk({title, arrayProduk}) {
           <div className="grid grid-cols-4 gap-5">
             <div className="flex flex-col hover:cursor-pointer gap-2 text-left">
                 <div className="relative">
-                  <img src={AlatSeni} alt="Gambar slogan 1" className='xl:w-52 xl:h-52 rounded-xl object-cover'/>
+                  <img src={ComingSoon} alt="Gambar slogan 1" className='xl:w-52 xl:h-52 rounded-xl object-cover'/>
                 </div>
                 <p className='font-bold text-lg'>Kanvas</p>
                 <div className="flex gap-2">
