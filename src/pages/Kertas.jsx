@@ -4,6 +4,7 @@ import HeaderPicture from '../components/HeaderPicture'
 import HeaderKertas from '../img/kertas/header-kertas.jpg'
 import ButtonBorder from '../components/ButtonBorder'
 import Footer from '../components/Footer'
+import Produk from '../components/Produk'
 
 function Kertas() {
   return (
@@ -15,6 +16,7 @@ function Kertas() {
       textTop={'Berbagai Macam Kertas'}
       textBottom={'Dengan Berbagai Macam Ukuran'}
       CustomButton={() => <ButtonBorder btnText={'Lihat Kertas'} linkTo={''}/>}/>
+      <Produk title={'Kertas'} categoryName={'Kertas'}/>
       <Footer/>
     </div>
   )
