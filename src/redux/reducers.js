@@ -1,8 +1,11 @@
+import { selectedProduct } from "./actions";
+
 // menyiapkan initialstate
 const initialState = {
     list: [],
     merks: [],
-    subCategories: []
+    subCategories: [],
+    selectedProduct: null
 };
 
 // reducers
@@ -19,7 +22,7 @@ export const productReducers = (state = initialState, action) => {
 };
 
 // category reducer
-export const categoryReducers = (state = { list: [] }, action) => {
+export const categoryReducers = (state = initialState, action) => {
     switch (action.type) {
         case "SET_CATEGORY":
             return { ...state, list: action.payload };
@@ -30,6 +33,12 @@ export const categoryReducers = (state = { list: [] }, action) => {
         case "SET_MERK":
             return { ...state, merks: action.payload };
     
+        case "SELECTED_PRODUCT":
+            return { ...state, selectedProduct: action.payload };
+
+        case "REMOVE_SELECTED_PRODUCT":
+            return {}
+            
         default:
             return state;
     }

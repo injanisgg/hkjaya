@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import HeaderPicture from '../components/HeaderPicture'
 import HeaderAtk from '../img/atk/header-atk.jpg'
@@ -7,8 +8,15 @@ import Footer from '../components/Footer'
 import Produk from '../components/Produk'
 
 function Atk() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(true); // Tampilkan setelah halaman dimuat
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
-    <div>
+    <div className={`transition-opacity duration-500 ${show ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar/>
       <HeaderPicture 
       picture={HeaderAtk}

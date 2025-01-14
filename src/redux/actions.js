@@ -76,5 +76,21 @@ export const filterMerk = (categoryName) => {
   };
 };
 
+// menampilkan produk berdasarkan id
+export const selectedProduct = (id) => {
+  const product = productsData.find((item) => item.id === id);
+  return {
+    type: "SELECTED_PRODUCT",
+    payload: product, // Kirim produk lengkap
+  };
+};
+
+// menghapus show produk dengan id
+export const removeSelectedProduct = () => {
+  return {
+    type: "REMOVE_SELECTED_PRODUCT"
+  }
+}
+
 
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import HeaderPicture from '../components/HeaderPicture'
@@ -20,23 +21,33 @@ function Beranda() {
     // handle redirect
     const redirectToAlatSeni = () => {
     navigate('/alatSeni')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     const redirectToATK = () => {
     navigate('/atk')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     const redirectToKertas = () => {
     navigate('/kertas')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     const redirectToPeralatan = () => {
     navigate('/peralatan')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        setShow(true); // Tampilkan setelah halaman dimuat
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
 
   return (
-    <div>
+    <div className={`transition-opacity duration-500 ${show ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar/>
       <HeaderPicture 
       picture={MainHeader} 

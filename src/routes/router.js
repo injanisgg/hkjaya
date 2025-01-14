@@ -21,7 +21,7 @@ const router = createBrowserRouter([
                 element: <AlatSeni />
             },
             {
-                path: '/produk',
+                path: '/produk/:id',
                 element: <DetailProduk />
             },
             {

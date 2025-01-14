@@ -3,12 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import Filters from "./Filters";
 import ComingSoon from "../img/comingsoon.png";
 import { productCategory } from "../redux/actions";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Produk({ headTitle, categoryName }) {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.categories.list); // Mengambil data produk
   const [currentPage, setCurrentPage] = useState(1); // Halaman aktif
   const itemsPerPage = 28; // Jumlah item per halaman
+  const { id } = useParams()
 
   useEffect(() => {
     if (categoryName) {
@@ -17,13 +19,13 @@ function Produk({ headTitle, categoryName }) {
   }, [categoryName]);
 
   // Hitung jumlah halaman
-  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const totalPages = products ? Math.ceil(products.length / itemsPerPage) : 1;
 
   // Data produk yang ditampilkan berdasarkan halaman aktif
-  const displayedProducts = products.slice(
+  const displayedProducts = products ? products.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
-  );
+  ) : [];
 
   // Fungsi untuk mengubah halaman
   const changePage = (page) => {
@@ -31,6 +33,13 @@ function Produk({ headTitle, categoryName }) {
       setCurrentPage(page);
     }
   };
+
+  // fungsi redirect ke detail produk
+  const navigate = useNavigate()
+  const redirectToDetail = (id) => {
+    navigate(`/produk/${id}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } 
 
   return (
     <div className="mb-20">
@@ -47,11 +56,12 @@ function Produk({ headTitle, categoryName }) {
         {/* End Filter */}
 
         {/* List Produk */}
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-4 grid-rows-7 gap-5">
           {displayedProducts.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col hover:cursor-pointer gap-2 text-left"
+              className="flex flex-col hover:cursor-pointer gap-2 text-left transition ease-in-out delay-100 hover:-translate-y-2"
+              onClick={() => redirectToDetail(item.id)}
             >
               <div className="relative">
                 <img
@@ -72,12 +82,12 @@ function Produk({ headTitle, categoryName }) {
                 {item.title.length > 20 ? `${item.title.slice(0, 20)}...` : item.title}
               </p>
               <p className="xl:w-52 text-sm">
-                {item.description.length > 50
-                  ? `${item.description.slice(0, 50)}...`
+                {item.description.length > 40
+                  ? `${item.description.slice(0, 40)}...`
                   : item.description}
               </p>
               <p className="font-bold text-lg">Rp. {item.price}</p>
-              <button className="rounded-xl bg-primary-blue text-sm text-white xl:w-52 py-2">
+              <button className="rounded-xl bg-primary-blue text-sm text-white xl:w-52 py-2" onClick={redirectToDetail}>
                 Lihat Produk
               </button>
             </div>
