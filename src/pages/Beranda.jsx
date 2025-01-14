@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import HeaderPicture from '../components/HeaderPicture'
 import MainHeader from '../img/home/header-main.jpg'
@@ -14,6 +15,26 @@ import Footer from '../components/Footer'
 
 
 function Beranda() {
+    const navigate = useNavigate();
+
+    // handle redirect
+    const redirectToAlatSeni = () => {
+    navigate('/alatSeni')
+    }
+
+    const redirectToATK = () => {
+    navigate('/atk')
+    }
+
+    const redirectToKertas = () => {
+    navigate('/kertas')
+    }
+
+    const redirectToPeralatan = () => {
+    navigate('/peralatan')
+    }
+
+
   return (
     <div>
       <Navbar/>
@@ -71,25 +92,26 @@ function Beranda() {
                 <p className='tex-lg'>Pilih kategori yang ingin kamu lihat!</p>
             </div>
             <div className='flex justify-around my-5'>
-                <div className="flex flex-col hover:cursor-pointer gap-2 items-center">
+                <div className="flex flex-col hover:cursor-pointer gap-2 items-center" onClick={redirectToAlatSeni}>
                     <img src={AlatSeni} alt="Gambar slogan 1" className='w-48 rounded-xl'/>
                     <p className='font-bold text-lg text-center pt-2'>Alat-Alat Seni</p>
                 </div>
-                <div className="flex flex-col hover:cursor-pointer gap-2 items-center">
+                <div className="flex flex-col hover:cursor-pointer gap-2 items-center" onClick={redirectToATK}>
                     <img src={ATK} alt="Gambar slogan 1" className='w-48 rounded-xl'/>
                     <p className='font-bold text-lg text-center pt-2'>Alat Tulis Kantor</p>
                 </div>
-                <div className="flex flex-col hover:cursor-pointer gap-2 items-center">
+                <div className="flex flex-col hover:cursor-pointer gap-2 items-center" onClick={redirectToKertas}>
                     <img src={Kertas} alt="Gambar slogan 1" className='w-48 rounded-xl'/>
                     <p className='font-bold text-lg text-center pt-2'>Kertas</p>
                 </div>
-                <div className="flex flex-col hover:cursor-pointer gap-2 items-center">
+                <div className="flex flex-col hover:cursor-pointer gap-2 items-center" onClick={redirectToPeralatan}>
                     <img src={Peralatan} alt="Gambar slogan 1" className='w-48 rounded-xl'/>
                     <p className='font-bold text-lg text-center pt-2'>Peralatan</p>
                 </div>
             </div>
         </div>
       {/* end category content */}
+
       {/* footer */}
       <Footer />
       {/* end footer */}

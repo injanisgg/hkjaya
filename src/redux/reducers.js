@@ -1,6 +1,8 @@
 // menyiapkan initialstate
 const initialState = {
     list: [],
+    merks: [],
+    subCategories: []
 };
 
 // reducers
@@ -20,10 +22,13 @@ export const productReducers = (state = initialState, action) => {
 export const categoryReducers = (state = { list: [] }, action) => {
     switch (action.type) {
         case "SET_CATEGORY":
-            return { ...state, list: action.payload }
+            return { ...state, list: action.payload };
 
         case "SET_SUBCATEGORY":
-            return { ...state, list: action.payload }
+            return { ...state, subCategories: action.payload };
+        
+        case "SET_MERK":
+            return { ...state, merks: action.payload };
     
         default:
             return state;

@@ -16,7 +16,7 @@ function Kertas() {
       textTop={'Berbagai Macam Kertas'}
       textBottom={'Dengan Berbagai Macam Ukuran'}
       CustomButton={() => <ButtonBorder btnText={'Lihat Kertas'} linkTo={''}/>}/>
-      <Produk title={'Kertas'} categoryName={'Kertas'}/>
+      <Produk headTitle={'Kertas'} categoryName={'Kertas'}/>
       <Footer/>
     </div>
   )

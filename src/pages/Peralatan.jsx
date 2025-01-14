@@ -16,7 +16,7 @@ function Peralatan() {
       textTop={'Peralatan Sekolah, Kantor'}
       textBottom={'Hingga Rumah Tersedia'}
       CustomButton={() => <ButtonBorder btnText={'Lihat Peralatan'} linkTo={''}/>}/>
-      <Produk title={'Peralatan'} categoryName={'Peralatan'}/>
+      <Produk headTitle={'Peralatan'} categoryName={'Peralatan'}/>
       <Footer/>
     </div>
   )

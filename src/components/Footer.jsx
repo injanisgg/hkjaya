@@ -1,7 +1,28 @@
 import React from 'react'
 import LogoFooter from '../img/logo-footer.png'
+import { useNavigate } from 'react-router-dom'
 
 function Footer() {
+
+    const navigate = useNavigate();
+
+    // handle redirect
+    const redirectToAlatSeni = () => {
+        navigate('/alatSeni')
+    }
+    
+    const redirectToATK = () => {
+        navigate('/atk')
+    }
+
+    const redirectToKertas = () => {
+        navigate('/kertas')
+    }
+
+    const redirectToPeralatan = () => {
+        navigate('/peralatan')
+    }
+
   return (
     <div className='flex flex-col'>
         <div className='w-full bg-slate-100 p-5'>
@@ -33,19 +54,19 @@ function Footer() {
                 </div>
                 <div className="flex flex-col text-primary-blue text-left gap-3">
                     <p className='font-bold text-lg'>Kategori</p>
-                    <div className='flex gap-2 items-center hover:cursor-pointer hover:underline'>
+                    <div className='flex gap-2 items-center hover:cursor-pointer hover:underline' onClick={redirectToAlatSeni}>
                         <i class="fa-solid fa-palette"></i>
                         <p>Alat-alat seni</p>
                     </div>
-                    <div className='flex gap-2 items-center hover:cursor-pointer hover:underline'>
+                    <div className='flex gap-2 items-center hover:cursor-pointer hover:underline' onClick={redirectToATK}>
                         <i class="fa-solid fa-pen"></i>
                         <p>Alat tulis kantor</p>
                     </div>
-                    <div className='flex gap-2 items-center hover:cursor-pointer hover:underline'>
+                    <div className='flex gap-2 items-center hover:cursor-pointer hover:underline' onClick={redirectToKertas}>
                         <i class="fa-solid fa-note-sticky"></i>
                         <p>Kertas</p>
                     </div>
-                    <div className='flex gap-2 items-center hover:cursor-pointer hover:underline'>
+                    <div className='flex gap-2 items-center hover:cursor-pointer hover:underline' onClick={redirectToPeralatan}>
                         <i class="fa-solid fa-toolbox"></i>
                         <p>Peralatan</p>
                     </div>

@@ -16,7 +16,7 @@ function Atk() {
       textTop={'Alat Tulis Kantor'}
       textBottom={'Apapun Tersedia Lengkap'}
       CustomButton={() => <ButtonBorder btnText={'Lihat Alat Tulis Kantor'} linkTo={''}/>}/>
-      <Produk title={'Alat Tulis Kantor'} categoryName={'ATK'}/>
+      <Produk headTitle={'Alat Tulis Kantor'} categoryName={'ATK'}/>
       <Footer/>
     </div>
   )

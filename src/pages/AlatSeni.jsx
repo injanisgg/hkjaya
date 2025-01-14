@@ -19,7 +19,7 @@ function AlatSeni() {
           <ButtonBorder btnText={"Lihat Alat Seni"} linkTo={""} />
         )}
       />
-      <Produk title={"Alat-Alat Seni"} categoryName={"Alat seni"} />
+      <Produk headTitle={"Alat-Alat Seni"} categoryName={"Alat seni"} />
       <Footer />
     </div>
   );
