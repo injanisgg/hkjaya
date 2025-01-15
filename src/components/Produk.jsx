@@ -8,24 +8,53 @@ import { useNavigate, useParams } from "react-router-dom";
 function Produk({ headTitle, categoryName }) {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.categories.list); // Mengambil data produk
-  const [currentPage, setCurrentPage] = useState(1); // Halaman aktif
   const itemsPerPage = 28; // Jumlah item per halaman
-  const { id } = useParams()
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const selectedFilters = useSelector((state) => state.categories.selectedFilters);
 
+  // state untuk menentukan halaman aktif pada pagination
+  const [currentPage, setCurrentPage] = useState(1); 
+
+  // state untuk filter
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  // state untuk menampilkan data dari filter atau display
+  const [isFilterApplied, setIsFilterApplied] = useState(false);
+
+  // mengambil data produk berdasar kategori
   useEffect(() => {
     if (categoryName) {
       dispatch(productCategory(categoryName)); // Set produk kategori berdasar nama kategori yang diinput
     }
   }, [categoryName]);
 
-  // Hitung jumlah halaman
-  const totalPages = products ? Math.ceil(products.length / itemsPerPage) : 1;
+  // mengambil data produk berdasarkan filter
+  useEffect(() => {
+    const filterProducts = () => {
+      return products.filter((product) => {
+        const matchesMerk = selectedFilters.merk.length === 0 || selectedFilters.merk.includes(product.merk);
+        const matchesSubCategory = selectedFilters.subCategory.length === 0 || selectedFilters.subCategory.includes(product.subcategory);
+        return matchesMerk && matchesSubCategory;
+      });
+    };
+
+    const filtered = filterProducts();
+    setFilteredProducts(filtered); //menyimpan produk yg difilter
+    setIsFilterApplied(selectedFilters.merk.length > 0 || selectedFilters.subCategory.length > 0)
+  }, [products, selectedFilters]);
 
   // Data produk yang ditampilkan berdasarkan halaman aktif
   const displayedProducts = products ? products.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
-  ) : [];
+  ) : [];  
+
+  // menentukan data yang ditampilkan
+  const productToDisplay = isFilterApplied ? filteredProducts : displayedProducts;
+
+  // Hitung jumlah halaman untuk pagination
+  const totalPages = isFilterApplied ? Math.ceil(filteredProducts.length / itemsPerPage) : Math.ceil(products.length / itemsPerPage);
 
   // Fungsi untuk mengubah halaman
   const changePage = (page) => {
@@ -35,7 +64,6 @@ function Produk({ headTitle, categoryName }) {
   };
 
   // fungsi redirect ke detail produk
-  const navigate = useNavigate()
   const redirectToDetail = (id) => {
     navigate(`/produk/${id}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -57,11 +85,13 @@ function Produk({ headTitle, categoryName }) {
 
         {/* List Produk */}
         <div className="grid grid-cols-4 grid-rows-7 gap-5">
-          {displayedProducts.map((item, index) => (
-            <div
-              key={index}
+          {/* mapping product */}
+          {productToDisplay.length > 0 ? (
+            productToDisplay.map((product) => (
+              <div
+              key={product.id}
               className="flex flex-col hover:cursor-pointer gap-2 text-left transition ease-in-out delay-100 hover:-translate-y-2"
-              onClick={() => redirectToDetail(item.id)}
+              onClick={() => redirectToDetail(product.id)}
             >
               <div className="relative">
                 <img
@@ -72,26 +102,31 @@ function Produk({ headTitle, categoryName }) {
               </div>
               <div className="flex gap-2">
                 <p className="text-xs text-white px-2 py-1 rounded-full w-max bg-red-600">
-                  {item.subcategory}
+                  {product.subcategory}
                 </p>
                 <p className="text-xs text-white px-2 py-1 rounded-full w-max bg-red-600">
-                  {item.merk}
+                  {product.merk}
                 </p>
               </div>
               <p className="font-bold text-base">
-                {item.title.length > 20 ? `${item.title.slice(0, 20)}...` : item.title}
+                {product.title.length > 20 ? `${product.title.slice(0, 20)}...` : product.title}
               </p>
               <p className="xl:w-52 text-sm">
-                {item.description.length > 40
-                  ? `${item.description.slice(0, 40)}...`
-                  : item.description}
+                {product.description.length > 40
+                  ? `${product.description.slice(0, 40)}...`
+                  : product.description}
               </p>
-              <p className="font-bold text-lg">Rp. {item.price}</p>
+              <p className="font-bold text-lg">Rp. {product.price}</p>
               <button className="rounded-xl bg-primary-blue text-sm text-white xl:w-52 py-2" onClick={redirectToDetail}>
                 Lihat Produk
               </button>
             </div>
-          ))}
+            ))
+            ) : ( 
+              <p>No product Found</p>
+          )};
+          {/* end mapping product based on filter */}
+        
         </div>
         {/* End List Produk */}
       </div>

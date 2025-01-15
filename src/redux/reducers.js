@@ -5,7 +5,15 @@ const initialState = {
     list: [],
     merks: [],
     subCategories: [],
-    selectedProduct: null
+    selectedProduct: null,
+    //search
+    search: '',
+    result: [],
+    //filter
+    selectedFilters: {
+        merk: [],
+        subCategory: []
+    },
 };
 
 // reducers
@@ -38,7 +46,20 @@ export const categoryReducers = (state = initialState, action) => {
 
         case "REMOVE_SELECTED_PRODUCT":
             return {}
-            
+        
+        case "UPDATE_SELECTED_FILTERS":
+            const { filterType, value } = action.payload;
+            const currentFilters = state.selectedFilters[filterType] || []; // Tambahkan fallback array
+            return {
+                ...state,
+                selectedFilters: {
+                    ...state.selectedFilters,
+                    [filterType]: currentFilters.includes(value)
+                        ? currentFilters.filter(item => item !== value) // Hapus jika sudah ada
+                        : [...currentFilters, value], // Tambahkan jika belum ada
+                },
+        };
+              
         default:
             return state;
     }
