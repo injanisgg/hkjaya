@@ -32,11 +32,19 @@ function Produk({ headTitle, categoryName }) {
   // mengambil data produk berdasarkan filter
   useEffect(() => {
     const filterProducts = () => {
-      return products.filter((product) => {
-        const matchesMerk = selectedFilters.merk.length === 0 || selectedFilters.merk.includes(product.merk);
-        const matchesSubCategory = selectedFilters.subCategory.length === 0 || selectedFilters.subCategory.includes(product.subcategory);
-        return matchesMerk && matchesSubCategory;
-      });
+      if (products && products.length) {
+        return products.filter((product) => {
+          if (product) {
+            const matchesMerk = selectedFilters.merk.length === 0 || (product && product.merk && selectedFilters.merk.includes(product.merk));
+            const matchesSubCategory = selectedFilters.subCategory.length === 0 || (product && product.subcategory && selectedFilters.subCategory.includes(product.subcategory));
+            return matchesMerk && matchesSubCategory;  
+          } else {
+            return false;
+          }
+        });
+      } else {
+        return [];
+      }
     };
 
     const filtered = filterProducts();
@@ -45,16 +53,18 @@ function Produk({ headTitle, categoryName }) {
   }, [products, selectedFilters]);
 
   // Data produk yang ditampilkan berdasarkan halaman aktif
-  const displayedProducts = products ? products.slice(
+  const displayedProducts = products && products.length ? products.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   ) : [];  
 
   // menentukan data yang ditampilkan
-  const productToDisplay = isFilterApplied ? filteredProducts : displayedProducts;
+  const productToDisplay = (isFilterApplied && filteredProducts && filteredProducts.length) ? filteredProducts : (displayedProducts && displayedProducts.length ? displayedProducts : []);
 
   // Hitung jumlah halaman untuk pagination
-  const totalPages = isFilterApplied ? Math.ceil(filteredProducts.length / itemsPerPage) : Math.ceil(products.length / itemsPerPage);
+  const totalPages = (products && products.length) || (filteredProducts && filteredProducts.length)
+  ? (isFilterApplied ? Math.ceil(filteredProducts.length / itemsPerPage) : Math.ceil(products.length / itemsPerPage))
+  : 1;
 
   // Fungsi untuk mengubah halaman
   const changePage = (page) => {
@@ -124,7 +134,7 @@ function Produk({ headTitle, categoryName }) {
             ))
             ) : ( 
               <p>No product Found</p>
-          )};
+          )}
           {/* end mapping product based on filter */}
         
         </div>

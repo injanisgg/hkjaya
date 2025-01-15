@@ -6,7 +6,7 @@ function Filters({title, content}) {
   const dispatch = useDispatch()
   const subCategories = useSelector(state => state.categories.subCategories)
   const merks = useSelector(state => state.categories.merks);
-  const selectedFilters = useSelector(state => state.categories.selectedFilters);
+  const selectedFilters = useSelector(state => state.categories.selectedFilters) || { merk: [], subCategory: [] };
 
   // fungsi untuk menangani perubahan checkbox
   const handleCheckbox = (item) => {
