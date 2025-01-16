@@ -25,7 +25,7 @@ function SearchPage() {
 
       {/* content */}
       {products.length > 0 ? (
-        <div className="mx-20 my-10 grid grid-cols-5 gap-5">
+        <div className="mx-20 my-10 flex flex-wrap justify-center gap-5">
           {products.map((product) => (
           <div key={product.id} className="flex flex-col hover:cursor-pointer gap-2 text-left transition ease-in-out delay-100 hover:-translate-y-2"
           onClick={() => redirectToDetail(product.id)}>
@@ -51,7 +51,7 @@ function SearchPage() {
                 ? `${product.description.slice(0, 40)}...`
                 : product.description}
             </p>
-            <p className="font-bold text-lg">Rp. </p>
+            <p className="font-bold text-lg">Rp. {product.price}</p>
             <button className="rounded-xl bg-primary-blue text-sm text-white xl:w-52 py-2" onClick={() => redirectToDetail(product.id)}>
               Lihat Produk
             </button>

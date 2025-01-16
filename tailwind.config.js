@@ -16,11 +16,11 @@ module.exports = {
       fontFamily: {},
       screens: {
         // mobile small - large
-        sm : "480px",
-        md : "768px",
+        sm : "480px", //hp
+        md : "768px", //tablet
         //pc or laptop small - large
-        lg : "1024px", //kebanyakan laptop segini
-        xl : "1280px", //laptop gg 1496 
+        lg : "1024px", //laptop kecil
+        xl : "1280px", //laptop gg 1496, kebanyakan laptop 1240
       },
       boxShadow: {
         'below': '0 4px 6px rgba(0, 0, 0, 0.1)', // Shadow hanya di bawah

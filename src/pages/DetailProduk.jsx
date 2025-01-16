@@ -52,9 +52,9 @@ function DetailProduk() {
           </div>
           <div className="flex flex-col gap-2">
             <h2 className="text-xl font-bold text-left">{product?.title}</h2>
-            <p className="w-[33rem] text-justify">{product?.description}</p>
+            <p className="xl:w-[33rem] text-justify">{product?.description}</p>
             <h2 className="text-2xl font-bold text-left">Rp. {product?.price}</h2>
-            <p className="w-[33rem] text-sm text-justify">
+            <p className="xl:w-[33rem] text-sm text-justify">
               *Harga yang tertera dapat berubah-ubah, namun tidak jauh dari harga yang tertera.
               Anda bisa mengetahui harga pastinya dengan datang ke toko ATK HK JAYA
             </p>
@@ -64,7 +64,7 @@ function DetailProduk() {
             </div>
             <div className="border-b-96 border border-primary-blue rounded-full"></div>
             <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center">
-              <a href="https://maps.app.goo.gl/UyTpzhtbTNxCySai8">Maps ke Toko ATK HK Jaya </a>
+              <a href="https://maps.app.goo.gl/UyTpzhtbTNxCySai8" target="_blank" rel="noopener noreferrer">Maps ke Toko ATK HK Jaya </a>
               <i className="fa-solid fa-chevron-right"></i>
             </div>
             <div className="border-b-96 border border-primary-blue rounded-full"></div>
@@ -75,7 +75,7 @@ function DetailProduk() {
 
       {/* produk spesification */}
       <div className="ml-40 my-20 mr-28 flex flex-col gap-3">
-        <h1 className="text-xl text-primary-blue font-bold text-left">
+        <h1 className="text-xl text-primary-blue font-bold text-left mt-10">
           Spesifikasi Produk
         </h1>
         <div>

@@ -32,7 +32,7 @@ const itemToDisplay = title === "Kategori" ?
   (merks || []).sort();
 
   return (
-    <div className='relative w-48 h-max py-10 bg-slate-100 rounded-xl'>
+    <div className='relative xl:w-48 h-max py-10 bg-slate-100 rounded-xl'>
         <p className='text-primary-blue ml-5 font-bold'>{title}</p>
         {itemToDisplay.map((item, index) => {
             const filterKey = title === "Kategori" ? "subCategory" : "merkFilter";

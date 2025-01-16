@@ -27,7 +27,7 @@ function Footer() {
       <div className="w-full bg-slate-100 p-5">
         <div className="flex justify-around items-center">
           <div className="flex flex-col">
-            <img src={LogoFooter} alt="HK Jaya logo" className="w-48" />
+            <img src={LogoFooter} alt="HK Jaya logo" className="xl:w-48" />
             <p className="font-bold text-lg text-left text-primary-blue pt-2">
               Semua Ada Semua Murah
             </p>
@@ -40,23 +40,25 @@ function Footer() {
             <p className="font-bold text-lg">Kontak Kami</p>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
               <i className="fa-brands fa-whatsapp"></i>
-              <p>+62 823-2629-2964</p>
+              <a href="https://wa.me/6282326292964" target="_blank" rel="noopener noreferrer">
+                +62 823-2629-2964
+              </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
               <i className="fa-brands fa-instagram"></i>
-              <a href="https://instagram.com/hkjayastationery">
+              <a href="https://instagram.com/hkjayastationery" target="_blank" rel="noopener noreferrer">
                 @hkjayastationery
               </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
               <i className="fa-brands fa-tiktok"></i>
-              <a href="https://instagram.com/hkjayastationery">
+              <a href="https://www.tiktok.com/@hk.jaya.stationery" target="_blank" rel="noopener noreferrer">
                 @hk.jaya.stationery
               </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
               <i className="fa-solid fa-location-dot"></i>
-              <a href="https://maps.app.goo.gl/gJhUPzyjMPCPpVLYA">
+              <a href="https://maps.app.goo.gl/gJhUPzyjMPCPpVLYA" target="_blank" rel="noopener noreferrer">
                 Lihat lokasi toko
               </a>
             </div>
@@ -96,15 +98,15 @@ function Footer() {
             <p className="font-bold text-lg">Developer Info</p>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
               <i className="fa-brands fa-linkedin"></i>
-              <a href="www.linkedin.com/in/suginiinjani">suginiinjani</a>
+              <a href="https://linkedin.com/in/suginiinjani" target="_blank" rel="noopener noreferrer">suginiinjani</a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
               <i className="fa-brands fa-github-square"></i>
-              <a href="https://github.com/injanisgg">injanisgg</a>
+              <a href="https://github.com/injanisgg" target="_blank" rel="noopener noreferrer">injanisgg</a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
               <i className="fa-brands fa-instagram"></i>
-              <a href="https://instagram.com/s.injzhani">s.injzhani</a>
+              <a href="https://instagram.com/s.injzhani" target="_blank" rel="noopener noreferrer">s.injzhani</a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
               <i className="fa-solid fa-envelope"></i>

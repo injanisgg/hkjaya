@@ -60,31 +60,31 @@ function Beranda() {
       <div className='py-5 bg-slate-50'>
         <div className="flex flex-col gap-5 text-center">
             <h1 className='text-2xl font-bold'>ATK HK JAYA</h1>
-            <p className='tex-lg'>Menyediakan Alat Tulis Kantor Semua Ada Semua Murah</p>
+            <p className='tex-lg'>Menyediakan Alat Tulis Kantor, Semua Ada Semua Murah</p>
         </div>
         <div className='flex justify-around my-5'>
             <div className="flex flex-col gap-2 items-center">
-                <img src={Slogan1} alt="Gambar slogan 1" className='w-48'/>
+                <img src={Slogan1} alt="Gambar slogan 1" className='xl:w-48'/>
                 <p className='font-bold text-lg text-center'>Paling Murah</p>
                 <div className="text-center">
                     <p>
-                        Dijamin harga murah ramah untuk <br/>
+                        Dijamin harga murah dan ramah untuk <br/>
                         pelajar, mahasiswa, dan semua orang
                     </p>
                 </div>
             </div>
             <div className="flex flex-col gap-2 items-center pt-5">
-                <img src={Slogan2} alt="Gambar slogan 1" className='w-48'/>
+                <img src={Slogan2} alt="Gambar slogan 1" className='xl:w-48'/>
                 <p className='font-bold text-lg text-center'>Paling Lengkap</p>
                 <div className="text-center">
                     <p>
-                        Semua ada di ATK HK JAYA dari mulai alat <br/>
+                        Semua ada di ATK HK JAYA mulai dari alat <br/>
                         tulis kantor, buku, hingga peralatan rumah tangga
                     </p>
                 </div>
             </div>
             <div className="flex flex-col gap-2 items-center">
-                <img src={Slogan3} alt="Gambar slogan 1" className='w-48'/>
+                <img src={Slogan3} alt="Gambar slogan 1" className='xl:w-48'/>
                 <p className='font-bold text-lg text-center'>Garansi Kualitas</p>
                 <div className="text-center">
                     <p>
@@ -104,19 +104,19 @@ function Beranda() {
             </div>
             <div className='flex justify-around my-5'>
                 <div className="flex flex-col hover:cursor-pointer gap-2 items-center" onClick={redirectToAlatSeni}>
-                    <img src={AlatSeni} alt="Gambar slogan 1" className='w-48 rounded-xl'/>
+                    <img src={AlatSeni} alt="Gambar slogan 1" className='xl:w-48 rounded-xl'/>
                     <p className='font-bold text-lg text-center pt-2'>Alat-Alat Seni</p>
                 </div>
                 <div className="flex flex-col hover:cursor-pointer gap-2 items-center" onClick={redirectToATK}>
-                    <img src={ATK} alt="Gambar slogan 1" className='w-48 rounded-xl'/>
+                    <img src={ATK} alt="Gambar slogan 1" className='xl:w-48 rounded-xl'/>
                     <p className='font-bold text-lg text-center pt-2'>Alat Tulis Kantor</p>
                 </div>
                 <div className="flex flex-col hover:cursor-pointer gap-2 items-center" onClick={redirectToKertas}>
-                    <img src={Kertas} alt="Gambar slogan 1" className='w-48 rounded-xl'/>
+                    <img src={Kertas} alt="Gambar slogan 1" className='xl:w-48 rounded-xl'/>
                     <p className='font-bold text-lg text-center pt-2'>Kertas</p>
                 </div>
                 <div className="flex flex-col hover:cursor-pointer gap-2 items-center" onClick={redirectToPeralatan}>
-                    <img src={Peralatan} alt="Gambar slogan 1" className='w-48 rounded-xl'/>
+                    <img src={Peralatan} alt="Gambar slogan 1" className='xl:w-48 rounded-xl'/>
                     <p className='font-bold text-lg text-center pt-2'>Peralatan</p>
                 </div>
             </div>
