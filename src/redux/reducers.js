@@ -1,22 +1,15 @@
-import { selectedProduct } from "./actions";
-
-// menyiapkan initialstate
 const initialState = {
     list: [],
     merks: [],
     subCategories: [],
     selectedProduct: null,
-    //search
     search: '',
     result: [],
-    //filter
     selectedFilters: {
-        merk: [],
+        merkFilter: [],
         subCategory: []
     },
 };
-
-// reducers
 
 // product reducer
 export const productReducers = (state = initialState, action) => {
@@ -29,7 +22,7 @@ export const productReducers = (state = initialState, action) => {
     }
 };
 
-// category reducer
+// category reducers
 export const categoryReducers = (state = initialState, action) => {
     switch (action.type) {
         case "SET_CATEGORY":
@@ -45,21 +38,37 @@ export const categoryReducers = (state = initialState, action) => {
             return { ...state, selectedProduct: action.payload };
 
         case "REMOVE_SELECTED_PRODUCT":
-            return {}
-        
+            return { ...state, selectedProduct: null, selectedFilters: initialState.selectedFilters };  
+
+        // reducers.js
         case "UPDATE_SELECTED_FILTERS":
             const { filterType, value } = action.payload;
-            const currentFilters = state.selectedFilters[filterType] || []; // Tambahkan fallback array
+            const currentFilters = state.selectedFilters[filterType] || [];
+            
+            // Check if value is an array (for reset case)
+            if (Array.isArray(value)) {
+                return {
+                    ...state,
+                    selectedFilters: {
+                        ...state.selectedFilters,
+                        [filterType]: value
+                    }
+                };
+            }
+
+            // For single value updates
+            const normalizedValue = typeof value === 'string' ? value.toLowerCase() : value;
+            const updatedFilters = currentFilters.includes(normalizedValue)
+                ? currentFilters.filter(item => item !== normalizedValue)
+                : [...currentFilters, normalizedValue];
+            
             return {
                 ...state,
                 selectedFilters: {
                     ...state.selectedFilters,
-                    [filterType]: currentFilters.includes(value)
-                        ? currentFilters.filter(item => item !== value) // Hapus jika sudah ada
-                        : [...currentFilters, value], // Tambahkan jika belum ada
+                    [filterType]: updatedFilters,
                 },
-        };
-              
+            };
         default:
             return state;
     }

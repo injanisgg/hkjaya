@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Filters from "./Filters";
 import ComingSoon from "../img/comingsoon.png";
-import { productCategory } from "../redux/actions";
+import { productCategory, updateSelectedFilters } from "../redux/actions";
 import { useNavigate, useParams } from "react-router-dom";
 
 function Produk({ headTitle, categoryName }) {
@@ -26,52 +26,69 @@ function Produk({ headTitle, categoryName }) {
   useEffect(() => {
     if (categoryName) {
       dispatch(productCategory(categoryName)); // Set produk kategori berdasar nama kategori yang diinput
+      dispatch(updateSelectedFilters('merkFilter', [])); // Reset filter merk
+      dispatch(updateSelectedFilters('subCategory', [])); // Reset filter subkategori
     }
   }, [categoryName]);
 
-  // mengambil data produk berdasarkan filter
   useEffect(() => {
     const filterProducts = () => {
-      if (products && products.length) {
+        if (!products || products.length === 0) {
+            return [];
+        }
+
         return products.filter((product) => {
-          if (product) {
-            const matchesMerk = selectedFilters.merk.length === 0 || (product && product.merk && selectedFilters.merk.includes(product.merk));
-            const matchesSubCategory = selectedFilters.subCategory.length === 0 || (product && product.subcategory && selectedFilters.subCategory.includes(product.subcategory));
-            return matchesMerk && matchesSubCategory;  
-          } else {
-            return false;
-          }
+            const productMerk = product.merk?.toLowerCase() || '';
+            const productSubCategory = product.subcategory?.toLowerCase() || '';
+
+            const matchesMerk =
+                selectedFilters.merkFilter.length === 0 ||
+                selectedFilters.merkFilter.includes(productMerk);
+
+            const matchesSubCategory =
+                selectedFilters.subCategory.length === 0 ||
+                selectedFilters.subCategory.includes(productSubCategory);
+
+            return matchesMerk && matchesSubCategory;
         });
-      } else {
-        return [];
-      }
     };
 
     const filtered = filterProducts();
-    setFilteredProducts(filtered); //menyimpan produk yg difilter
-    setIsFilterApplied(selectedFilters.merk.length > 0 || selectedFilters.subCategory.length > 0)
-  }, [products, selectedFilters]);
-
-  // Data produk yang ditampilkan berdasarkan halaman aktif
-  const displayedProducts = products && products.length ? products.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  ) : [];  
+    setFilteredProducts(filtered);
+    setIsFilterApplied(
+        selectedFilters.merkFilter.length > 0 || 
+        selectedFilters.subCategory.length > 0
+    );
+}, [products, selectedFilters]);
 
   // menentukan data yang ditampilkan
-  const productToDisplay = (isFilterApplied && filteredProducts && filteredProducts.length) ? filteredProducts : (displayedProducts && displayedProducts.length ? displayedProducts : []);
+  const productToDisplay = (isFilterApplied && filteredProducts && filteredProducts.length)
+    ? filteredProducts
+    : (products && products.length ? products : []);
+
+  // Data produk yang ditampilkan berdasarkan halaman aktif
+  const displayedProducts = (productToDisplay && productToDisplay.length)
+    ? productToDisplay.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+    : [];
+
+  // Ketika filter diterapkan, kembali ke halaman 1
+  useEffect(() => {
+    if (isFilterApplied) {
+      setCurrentPage(1);
+    }
+  }, [isFilterApplied]);
 
   // Hitung jumlah halaman untuk pagination
-  const totalPages = (products && products.length) || (filteredProducts && filteredProducts.length)
-  ? (isFilterApplied ? Math.ceil(filteredProducts.length / itemsPerPage) : Math.ceil(products.length / itemsPerPage))
-  : 1;
-
-  // Fungsi untuk mengubah halaman
-  const changePage = (page) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-    }
-  };
+  const totalPages = (productToDisplay && productToDisplay.length)
+    ? Math.ceil(productToDisplay.length / itemsPerPage)
+    : 1;
+    
+    // Fungsi untuk mengubah halaman
+    const changePage = (page) => {
+      if (page >= 1 && page <= totalPages) {
+        setCurrentPage(page);
+      }
+    };
 
   // fungsi redirect ke detail produk
   const redirectToDetail = (id) => {
@@ -96,8 +113,8 @@ function Produk({ headTitle, categoryName }) {
         {/* List Produk */}
         <div className="grid grid-cols-4 grid-rows-7 gap-5">
           {/* mapping product */}
-          {productToDisplay.length > 0 ? (
-            productToDisplay.map((product) => (
+          {displayedProducts.length > 0 ? (
+            displayedProducts.map((product) => (
               <div
               key={product.id}
               className="flex flex-col hover:cursor-pointer gap-2 text-left transition ease-in-out delay-100 hover:-translate-y-2"
@@ -133,7 +150,7 @@ function Produk({ headTitle, categoryName }) {
             </div>
             ))
             ) : ( 
-              <p>No product Found</p>
+              <p className="text-2xl font-bold col-start-3 col-span-2 py-20">Produk Tidak Ditemukan</p>
           )}
           {/* end mapping product based on filter */}
         

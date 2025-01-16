@@ -13,13 +13,26 @@ export const setCategory = (categories) => ({
     payload: categories
 });
 
-// Filter produk berdasarkan kategori
+// Action untuk mengatur subkategori
+export const setSubCategory = (subCategories) => ({
+    type: "SET_SUBCATEGORY",
+    payload: subCategories
+});
+
+// Action untuk mengatur merek
+export const setMerk = (merks) => ({
+    type: "SET_MERK",
+    payload: merks
+});
+
+// Action untuk menyimpan product kategori
 export const productCategory = (input) => {
     return (dispatch) => {
         try {
-            // Validasi dan filter produk berdasarkan kategori
+            const normalizedInput = input.toLowerCase();
             const filterCategory = Array.isArray(productsData)
-                ? productsData.filter((product) => product.category.includes(input))
+                ? productsData.filter((product) => 
+                    product.category.toLowerCase().includes(normalizedInput))
                 : [];
             dispatch(setCategory(filterCategory));
         } catch (error) {
@@ -28,52 +41,49 @@ export const productCategory = (input) => {
     };
 };
 
-// Action untuk mengatur subkategori
-export const setSubCategory = (subCategories) => ({
-    type: "SET_SUBCATEGORY",
-    payload: subCategories
-});
-
-// Filter subkategori berdasarkan kategori
-export const filterSubCategory = (categoryName) => {
+// action untuk mengatur filter merk
+export const filterMerk = (categoryName) => {
     return (dispatch) => {
         try {
-            // Filter subkategori unik berdasarkan kategori
-            const filteredSubCategories = Array.isArray(productsData)
+            const normalizedCategoryName = categoryName.toLowerCase();
+            const filteredMerks = Array.isArray(productsData)
                 ? productsData
-                      .filter((product) => product.category === categoryName)
-                      .map((product) => product.subcategory)
-                      .filter((subcategory) => subcategory) // Hapus nilai undefined/null
+                    .filter((product) => 
+                        product.category.toLowerCase() === normalizedCategoryName)
+                    .map((product) => product.merk?.toLowerCase())
+                    .filter(Boolean)
                 : [];
-            const uniqueSubCategories = [...new Set(filteredSubCategories)].sort(); // Hapus duplikat dan urutkan secara abjad
-            dispatch(setSubCategory(uniqueSubCategories));
+
+            const uniqueMerks = [...new Set(filteredMerks)].sort();
+            dispatch(setMerk(uniqueMerks));
         } catch (error) {
-            console.error("Error filtering subcategory:", error);
+            console.error("Error filtering merk:", error);
         }
     };
 };
 
-// Action untuk mengatur merek
-export const setMerk = (merks) => ({
-    type: "SET_MERK",
-    payload: merks
-});
-
-// Filter merek berdasarkan kategori
-export const filterMerk = (categoryName) => {
+// action untuk mengatur filter subcategory
+export const filterSubCategory = (categoryName) => {
     return (dispatch) => {
         try {
-            // Filter merek unik berdasarkan kategori
-            const filteredMerks = Array.isArray(productsData)
+            if (!categoryName) {
+                console.warn("Category name is empty or invalid.");
+                return;
+            }
+
+            const normalizedCategoryName = categoryName.toLowerCase();
+            const filteredSubCategories = Array.isArray(productsData)
                 ? productsData
-                      .filter((product) => product.category === categoryName)
-                      .map((product) => product.merk)
-                      .filter((merk) => merk) // Hapus nilai undefined/null
+                    .filter((product) => 
+                        product.category.toLowerCase() === normalizedCategoryName)
+                    .map((product) => product.subcategory?.toLowerCase())
+                    .filter(Boolean)
                 : [];
-            const uniqueMerks = [...new Set(filteredMerks)].sort(); // Hapus duplikat
-            dispatch(setMerk(uniqueMerks));
+
+            const uniqueSubCategories = [...new Set(filteredSubCategories)].sort();
+            dispatch(setSubCategory(uniqueSubCategories));
         } catch (error) {
-            console.error("Error filtering merk:", error);
+            console.error("Error filtering subcategory:", error);
         }
     };
 };

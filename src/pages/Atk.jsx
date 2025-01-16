@@ -15,6 +15,11 @@ function Atk() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  // scroll down to item
+  const scrollDown = () => {
+    window.scrollTo({top: 320, behavior:"smooth"})
+  }
+
   return (
     <div className={`transition-opacity duration-500 ${show ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar/>
@@ -23,7 +28,7 @@ function Atk() {
       alt={'Header ATK'}
       textTop={'Alat Tulis Kantor'}
       textBottom={'Apapun Tersedia Lengkap'}
-      CustomButton={() => <ButtonBorder btnText={'Lihat Alat Tulis Kantor'} linkTo={''}/>}/>
+      CustomButton={() => <ButtonBorder btnText={'Lihat Alat Tulis Kantor'} event={scrollDown}/>}/>
       <Produk headTitle={'Alat Tulis Kantor'} categoryName={'ATK'}/>
       <Footer/>
     </div>

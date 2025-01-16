@@ -15,6 +15,11 @@ function Kertas() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  // scroll down to item
+  const scrollDown = () => {
+    window.scrollTo({top: 320, behavior:"smooth"})
+  }
+
   return (
     <div className={`transition-opacity duration-500 ${show ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar />
@@ -23,7 +28,7 @@ function Kertas() {
       alt={'Header Kertas'}
       textTop={'Berbagai Macam Kertas'}
       textBottom={'Dengan Berbagai Macam Ukuran'}
-      CustomButton={() => <ButtonBorder btnText={'Lihat Kertas'} linkTo={''}/>}/>
+      CustomButton={() => <ButtonBorder btnText={'Lihat Kertas'} event={scrollDown}/>}/>
       <Produk headTitle={'Kertas'} categoryName={'Kertas'}/>
       <Footer/>
     </div>

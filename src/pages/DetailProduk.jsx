@@ -26,6 +26,11 @@ function DetailProduk() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // scroll down to item
+  const scrollDown = () => {
+    window.scrollTo({top: 470, behavior:"smooth"})
+  }
+
   return (
     <div>
       <Navbar />
@@ -53,13 +58,13 @@ function DetailProduk() {
               *Harga yang tertera dapat berubah-ubah, namun tidak jauh dari harga yang tertera.
               Anda bisa mengetahui harga pastinya dengan datang ke toko ATK HK JAYA
             </p>
-            <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center">
+            <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center" onClick={scrollDown}>
               <span>Spesifikasi Produk</span>
               <i className="fa-solid fa-chevron-right"></i>
             </div>
             <div className="border-b-96 border border-primary-blue rounded-full"></div>
             <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center">
-              <span>Maps ke Toko ATK HK Jaya </span>
+              <a href="https://maps.app.goo.gl/UyTpzhtbTNxCySai8">Maps ke Toko ATK HK Jaya </a>
               <i className="fa-solid fa-chevron-right"></i>
             </div>
             <div className="border-b-96 border border-primary-blue rounded-full"></div>

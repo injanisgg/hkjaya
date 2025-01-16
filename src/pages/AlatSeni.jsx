@@ -15,6 +15,11 @@ function AlatSeni() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  // scroll down to item
+  const scrollDown = () => {
+    window.scrollTo({top: 320, behavior:"smooth"})
+  }
+
   return (
     <div className={`transition-opacity duration-500 ${show ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar />
@@ -24,7 +29,7 @@ function AlatSeni() {
         textTop={"Menyediakan Alat-Alat"}
         textBottom={"Seni Lengkap"}
         CustomButton={() => (
-          <ButtonBorder btnText={"Lihat Alat Seni"} linkTo={""} />
+          <ButtonBorder btnText={"Lihat Alat Seni"} event={scrollDown}/>
         )}
       />
       <Produk headTitle={"Alat-Alat Seni"} categoryName={"Alat seni"} />

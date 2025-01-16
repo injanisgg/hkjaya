@@ -15,6 +15,11 @@ function Peralatan() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  // scroll down to item
+  const scrollDown = () => {
+    window.scrollTo({top: 320, behavior:"smooth"})
+  }
+
   return (
     <div className={`transition-opacity duration-500 ${show ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar />
@@ -23,7 +28,7 @@ function Peralatan() {
       alt={'Header Peralatan'}
       textTop={'Peralatan Sekolah, Kantor'}
       textBottom={'Hingga Rumah Tersedia'}
-      CustomButton={() => <ButtonBorder btnText={'Lihat Peralatan'} linkTo={''}/>}/>
+      CustomButton={() => <ButtonBorder btnText={'Lihat Peralatan'} event={scrollDown}/>}/>
       <Produk headTitle={'Peralatan'} categoryName={'Peralatan'}/>
       <Footer/>
     </div>
