@@ -17,6 +17,12 @@ export const productReducers = (state = initialState, action) => {
         case "LOAD_PRODUCTS":
             return { ...state, list: action.payload }; //state mengembalikan apa yg ada di dalam state sebelumnya
 
+        case "SET_PRODUCTS":
+            return { ...state, list: action.payload }
+
+        case "SEARCH_PRODUCTS":
+            return { ...state, list: action.payload }
+            
         default:
             return state;
     }

@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { productSearch } from '../redux/actions';
+import { useNavigate } from 'react-router-dom';
 
 function Search() {
+  const [inputSearch, setInputSearch] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    dispatch(productSearch(inputSearch));
+    navigate(`/search/${inputSearch}`);
+  }
+
   return (
     <div className="">
-      <form  className="relative lg:w-80 xl:w-64">
+      <form onSubmit={handleSearch} className="relative lg:w-80 xl:w-64">
         <input
           type="text"
-          value=""
-          // onChange=""
+          value={inputSearch}
+          onChange={(e) => setInputSearch(e.target.value)}
           className="form-input w-full bg-gray-100 rounded-full py-2 pl-10 pr-4 text-gray-700 placeholder-gray-500 focus:outline-none text-md"
           placeholder="Cari produk"
         />

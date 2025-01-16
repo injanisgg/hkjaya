@@ -6,6 +6,7 @@ import Atk from "../pages/Atk";
 import Kertas from '../pages/Kertas';
 import Peralatan from '../pages/Peralatan';
 import DetailProduk from "../pages/DetailProduk";
+import SearchPage from "../pages/SearchPage";
 
 const router = createBrowserRouter([
     {
@@ -33,8 +34,12 @@ const router = createBrowserRouter([
                 element: <Kertas />
             },
             {
-                path: 'peralatan',
+                path: '/peralatan',
                 element: <Peralatan />
+            },
+            {
+                path: '/search/:inputSearch',
+                element: <SearchPage />
             }
         ]
     }

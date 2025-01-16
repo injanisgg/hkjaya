@@ -41,6 +41,30 @@ export const productCategory = (input) => {
     };
 };
 
+// Action untuk mencari produk
+export const productSearch = (inputSearch) => {
+  return (dispatch) => {
+    try {
+      const normalizedInput = inputSearch.toLowerCase();
+      const filterProducts = Array.isArray(productsData)
+        ? productsData.filter((product) =>
+            product.title.toLowerCase().includes(normalizedInput) ||
+            product.merk.toLowerCase().includes(normalizedInput) ||
+            product.subcategory.toLowerCase().includes(normalizedInput)
+          )
+        : [];
+      dispatch(setSearchProducts(filterProducts));
+    } catch (error) {
+      console.error("Error filtering products:", error);
+    }
+  };
+};
+
+// Action untuk mengatur produk hasil pencarian
+export const setSearchProducts = (products) => ({
+  type: "SEARCH_PRODUCTS",
+  payload: products,
+});
 // action untuk mengatur filter merk
 export const filterMerk = (categoryName) => {
     return (dispatch) => {
