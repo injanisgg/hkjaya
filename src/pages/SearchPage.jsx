@@ -31,9 +31,9 @@ function SearchPage() {
           onClick={() => redirectToDetail(product.id)}>
             <div className="relative">
               <img 
-              src={ComingSoon} 
+              src={product.image || ComingSoon} 
               alt={product.title}
-              className='xl:w-52 xl:h-52 rounded-xl object-cover' />
+              className='xl:w-52 xl:h-52 rounded-xl object-cover border-[1.3px] border-primary-blue' />
             </div>
             <div className="flex gap-2">
               <p className="text-xs text-white px-2 py-1 rounded-full w-max bg-red-600">

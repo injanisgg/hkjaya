@@ -45,8 +45,8 @@ function DetailProduk() {
         <div className="flex mt-32 gap-20">
           <div className="relative">
             <img
-              src={DetailImg}
-              alt=""
+              src={product?.image || DetailImg}
+              alt={product?.title}
               className="size-96 object-cover ml-40"
             />
           </div>

@@ -122,9 +122,9 @@ function Produk({ headTitle, categoryName }) {
             >
               <div className="relative">
                 <img
-                  src={ComingSoon}
-                  alt="Gambar produk"
-                  className="xl:w-52 xl:h-52 rounded-xl object-cover"
+                  src={product.image || ComingSoon}
+                  alt={product.title}
+                  className="xl:w-52 xl:h-52 rounded-xl object-cover border-[1.3px] border-primary-blue"
                 />
               </div>
               <div className="flex gap-2">
