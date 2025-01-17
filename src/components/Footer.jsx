@@ -27,7 +27,7 @@ function Footer() {
       <div className="w-full bg-slate-100 p-5">
         <div className="flex justify-around items-center">
           <div className="flex flex-col">
-            <img src={LogoFooter} alt="HK Jaya logo" className="xl:w-48" />
+            <img src={LogoFooter} alt="HK Jaya logo" className="xl:w-48 lg:w-40" />
             <p className="font-bold text-lg text-left text-primary-blue pt-2">
               Semua Ada Semua Murah
             </p>

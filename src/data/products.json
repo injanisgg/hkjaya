@@ -18,7 +18,7 @@
         "title": "Maries Cat Acrylic",
         "merk": "Maries",
         "price": "9.000",
-        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2020/11/18/8d8df4c3-7a18-4520-b405-fcd522ef9e0f.jpg",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/maries%20akrilik.jpg?raw=true",
         "description": "Cat akrilik Maries dengan pigmen yang kuat dan tahan lama. Ideal untuk pelajar dan seniman pemula, memberikan hasil yang cerah dan konsisten.",
         "color": "Semua warna",
         "size": "1 tube"
@@ -30,7 +30,7 @@
         "title": "Asturo Cat Acrylic",
         "merk": "Asturo",
         "price": "10.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/asturo%20akrilik.jpg?raw=true",
         "description": "Cat akrilik Asturo dengan formula khusus yang memberikan hasil akhir yang mengkilap. Mudah dicampur dan cocok untuk berbagai teknik lukis.",
         "color": "Semua warna",
         "size": "1 tube"
@@ -54,7 +54,7 @@
         "title": "Eds On Cat Acrylic",
         "merk": "Eds On",
         "price": "22.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/eds%20on%20acrilic%2012%20color.jpg?raw=true",
         "description": "Cat akrilik Eds On dengan formula advanced yang menghasilkan lapisan cat yang rata dan mudah diaplikasikan. Cocok untuk karya profesional.",
         "color": "Semua warna",
         "size": "Semua ukuran"
@@ -66,10 +66,10 @@
         "title": "Trifelo Cat Acrylic",
         "merk": "Trifelo",
         "price": "22.500",
-        "image": "https://images.tokopedia.net/img/cache/700/product-1/2019/12/4/997352/997352_58df85a0-a526-4c4e-beba-2e1fc7217142_1080_1080.jpg",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/trifelo%20acrylic.jpg?raw=true",
         "description": "Cat akrilik Trifelo dengan daya tutup superior dan pigmen berkualitas tinggi. Memberikan hasil yang profesional dengan ketahanan warna yang baik.",
         "color": "Semua warna",
-        "size": "Semua ukuran"
+        "size": "12x6ml"
     },
     {
         "id": 7,
@@ -78,7 +78,7 @@
         "title": "Enter Cat Acrylic",
         "merk": "Enter",
         "price": "22.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/enter%20cat%20acrylic%2012%20color.jpg?raw=true",
         "description": "Cat akrilik Enter dengan formula khusus yang tidak mudah mengelupas. Cocok untuk berbagai permukaan dengan daya rekat yang kuat.",
         "color": "Semua warna",
         "size": "Semua ukuran"
@@ -87,10 +87,10 @@
         "id": 8,
         "category": "Alat seni",
         "subcategory": "Cat lukis",
-        "title": "Enter Cat Acrylic Metallic",
-        "merk": "Enter",
+        "title": "V-Tec Cat Acrylic Metallic",
+        "merk": "V-Tec",
         "price": "31.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/v%20tec%20metalic.jpg?raw=true",
         "description": "Cat akrilik metalik Enter dengan efek berkilau yang mewah. Sempurna untuk proyek seni yang membutuhkan tampilan metalik yang elegan.",
         "color": "Semua warna",
         "size": "Semua ukuran"
@@ -102,7 +102,7 @@
         "title": "V Tech Cat Acrylic Neon",
         "merk": "V Tech",
         "price": "31.000",
-        "image": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/11/24/62e88508-d975-4a8f-b146-0a1e0d611dd1.jpg",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/v%20tec%20neon%20acrilik%2012.jpg?raw=true",
         "description": "Cat akrilik neon V Tech dengan warna-warna fluorescent yang cerah. Ideal untuk karya seni yang membutuhkan efek yang mencolok dan vibran.",
         "color": "Semua warna",
         "size": "Semua ukuran"
@@ -126,7 +126,7 @@
         "title": "Combo Cat Poster",
         "merk": "Combo",
         "price": "3.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/combo%20poster%20color.jpg?raw=true",
         "description": "Cat poster Combo dengan formula water-based yang mudah digunakan. Ideal untuk pembuatan poster dan karya seni di atas kertas.",
         "color": "Semua warna",
         "size": "1 tube"
@@ -138,7 +138,7 @@
         "title": "Simba Lion Cat Poster",
         "merk": "Simba Lion",
         "price": "10.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/simbalion%20poster.jpg?raw=true",
         "description": "Cat poster Simba Lion dengan pigmen yang kuat dan mudah dicampur. Memberikan hasil yang cerah dan rata pada berbagai jenis kertas.",
         "color": "Semua warna",
         "size": "1 tube"
@@ -186,7 +186,7 @@
         "title": "Mr. Love Guitar Cat Water Color No. 110",
         "merk": "Mr. Love Guitar",
         "price": "13.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/mr%20love%20guitar%20water%20color%20no%20110.jpg?raw=true",
         "description": "Cat air Mr. Love Guitar dengan pigmen berkualitas tinggi. Menghasilkan warna-warna yang hidup dan mudah dicampur.",
         "color": "Semua warna",
         "size": "Semua ukuran"
@@ -570,7 +570,7 @@
         "title": "Joyko oil pastel 12 color (kecil)",
         "merk": "Joyko",
         "price": "9.000",
-        "image": "https://www.joyko.co.id/image/cache/data/TLP12S-900x900.jpg",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/oil%20pastel%20joyko%2012%20colors.jpg?raw=true",
         "description": "Crayon Joyko oil pastel 12 warna ukuran kecil, cocok untuk menggambar dan mewarnai.",
         "color": "12 warna",
         "size": "Kecil"
@@ -582,7 +582,7 @@
         "title": "Joyko oil pastel 24 color",
         "merk": "Joyko",
         "price": "70.000",
-        "image": "https://www.joyko.co.id/image/cache/data/P-24CR-1-01-900x900.jpg",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/joyko%20oilpaste%2024%20color.jpg?raw=true",
         "description": "Crayon Joyko oil pastel 24 warna, kualitas terbaik untuk seni.",
         "color": "24 warna",
         "size": "Standar"
@@ -594,7 +594,7 @@
         "title": "Joyko oil pastel 18 color",
         "merk": "Joyko",
         "price": "26.000",
-        "image": "https://www.joyko.co.id/image/cache/data/TLP18S-900x900.jpg",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/oil%20pastel%20joyko%2018%20colors.jpg?raw=true",
         "description": "Crayon Joyko oil pastel 18 warna, ideal untuk anak-anak dan pemula.",
         "color": "18 warna",
         "size": "Standar"
@@ -618,7 +618,7 @@
         "title": "Joyko twist crayon 12 color",
         "merk": "Joyko",
         "price": "25.000",
-        "image": "https://www.joyko.co.id/image/cache/data/TWCR-12-24-COVER-01-650x650.jpg",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/Twist%2012s%20Pjg%20Joyko.png?raw=true",
         "description": "Crayon Joyko twist 12 warna, praktis dengan desain twist.",
         "color": "12 warna",
         "size": "Standar"
@@ -723,10 +723,10 @@
         "id": 61, 
         "category": "Alat seni",
         "subcategory": "Crayon", 
-        "title": "Crayon karakter twist crayon 12 color (kecil)",
-        "merk": "Crayon karakter",
+        "title": "Joyko Crayon karakter twist crayon 12 color (kecil)",
+        "merk": "Joyko",
         "price": "20.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/Twist%2012s%20Mini%20Joyko.jpeg?raw=true",
         "description": "Crayon karakter twist crayon 12 warna ukuran kecil, praktis untuk digunakan.",
         "color": "12 warna",
         "size": "Kecil"
@@ -1251,11 +1251,11 @@
         "id": 105, 
         "category": "Alat seni",
         "subcategory": "Palette", 
-        "title": "Pallete V-tech Bunga Besar",
-        "merk": "Pallete V-tech",
+        "title": "Pallete V-Tec Bunga Besar",
+        "merk": "Pallete V-Tec",
         "price": "4.000",
-        "image": "",
-        "description": "Pallete V-tech dengan desain bunga besar, sempurna untuk melukis dengan berbagai cat.",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/palete%20bunga%20putih.jpg?raw=true",
+        "description": "Pallete V-Tec dengan desain bunga besar, sempurna untuk melukis dengan berbagai cat.",
         "color": "Multicolor",
         "size": "Bunga Besar"
     },
@@ -1266,7 +1266,7 @@
         "title": "Pallete V-tech Bunga Kecil",
         "merk": "Pallete V-tech",
         "price": "2.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/palete%20bunga%20putih.jpg?raw=true",
         "description": "Pallete V-tech dengan desain bunga kecil, cocok untuk seni lukis detail.",
         "color": "Multicolor",
         "size": "Bunga Kecil"
@@ -1674,7 +1674,7 @@
         "title": "Binder Joyko A5",
         "merk": "Joyko",
         "price": "20.000",
-        "image": "https://drive.google.com/uc?export=view&id=16A8T38IwDPIECsvZJTGlBKoPp_vyt9oK",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/Binder%20Joyko%20A5.jpg?raw=true",
         "description": "Binder Joyko ukuran A5 dengan desain menarik, tersedia dalam varian College, Faculty, Pompom, dan Image.",
         "color": "Beragam (College, Faculty, Pompom, Image)",
         "size": "A5"
@@ -1686,7 +1686,7 @@
         "title": "Binder Joyko B5",
         "merk": "Joyko",
         "price": "20.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/Binder%20Joyko%20B5.jpg?raw=true",
         "description": "Binder Joyko ukuran B5 dengan desain menarik, tersedia dalam varian College, Faculty, Pompom, dan Image.",
         "color": "Beragam (College, Faculty, Pompom, Image)",
         "size": "B5"
@@ -2082,10 +2082,10 @@
         "title": "Correction Tape Greebel 360* Refill",
         "merk": "Greebel",
         "price": "13.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/greebel%20corr%20tape%206m.jpg?raw=true",
         "description": "Correction tape Greebel dengan varian 360* refill, mudah digunakan dan ekonomis.",
         "color": "Default",
-        "size": "360* refill"
+        "size": "6 Meter"
     },
     { 
         "id": 175, 
@@ -2094,10 +2094,10 @@
         "title": "Correction Tape Greebel GCT-804",
         "merk": "Greebel",
         "price": "7.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/greebel%20corr%20tape%208m.jpg?raw=true",
         "description": "Correction tape Greebel model GCT-804, desain kompak dan efisien.",
         "color": "Default",
-        "size": "GCT-804"
+        "size": "8 Meter"
     },
     { 
         "id": 176, 
@@ -2115,13 +2115,13 @@
         "id": 177, 
         "category": "ATK",
         "subcategory": "Correction tape", 
-        "title": "Correction Tape Greebel GCT-602",
+        "title": "Correction Tape Greebel GCT-602 2 pcs",
         "merk": "Greebel",
         "price": "13.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/greebel%206mx2.jpg?raw=true",
         "description": "Correction tape Greebel model GCT-602, ideal untuk kebutuhan sehari-hari.",
         "color": "Default",
-        "size": "GCT-602"
+        "size": "6 Meter"
     },
     { 
         "id": 178, 
@@ -2166,7 +2166,7 @@
         "title": "Correction Tape ZRM ZCT-02",
         "merk": "ZRM",
         "price": "5.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/zrm%207m%20corr%20tape.jpg?raw=true",
         "description": "Correction tape ZRM model ZCT-02, sempurna untuk keperluan koreksi cepat.",
         "color": "Default",
         "size": "ZCT-02"
@@ -2214,7 +2214,7 @@
         "title": "Correction Tape ZRM ZCT-01",
         "merk": "ZRM",
         "price": "6.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/zrm%20corr%20tape%2012m.jpg?raw=true",
         "description": "Correction tape ZRM model ZCT-01, praktis dan mudah digunakan.",
         "color": "Default",
         "size": "ZCT-01"
@@ -2226,10 +2226,10 @@
         "title": "Correction Tape Debozz DB-CT006",
         "merk": "Debozz",
         "price": "6.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/debozz%20super%20sorection%20tape%208m.jpg?raw=true",
         "description": "Correction tape Debozz DB-CT006, efisien dan nyaman untuk koreksi.",
         "color": "Default",
-        "size": "DB-CT006"
+        "size": "8 Meter"
     },
     { 
         "id": 187, 
@@ -2238,10 +2238,10 @@
         "title": "Correction Tape Debozz DB-CT005",
         "merk": "Debozz",
         "price": "5.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/debozz%20mini%2016.jpg?raw=true",
         "description": "Correction tape Debozz DB-CT005, ringan dan praktis.",
         "color": "Default",
-        "size": "DB-CT005"
+        "size": "16"
     },
     { 
         "id": 188, 
@@ -2250,10 +2250,10 @@
         "title": "Correction Tape Debozz DB-CT007A",
         "merk": "Debozz",
         "price": "6.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/debozz%2010m%20correction%20tape.jpg?raw=true",
         "description": "Correction tape Debozz DB-CT007A, cepat dan rapi.",
         "color": "Default",
-        "size": "DB-CT007A"
+        "size": "10 Meter"
     },
     { 
         "id": 189, 
@@ -2262,10 +2262,10 @@
         "title": "Correction Tape Gadjah Mada GM-100CT",
         "merk": "Gadjah Mada",
         "price": "6.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/gm%20corr%20tape%2012m.jpg?raw=true",
         "description": "Correction tape Gadjah Mada GM-100CT, efektif dan mudah digunakan.",
         "color": "Default",
-        "size": "GM-100CT"
+        "size": "12 Meter"
     },
     { 
         "id": 190, 
@@ -2274,22 +2274,22 @@
         "title": "Correction Tape K Two No-0160",
         "merk": "K Two",
         "price": "4.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/k%20two%20corr%20tape%2012m.jpg?raw=true",
         "description": "Correction tape K Two No-0160, desain kompak dan efisien.",
         "color": "Default",
-        "size": "No-0160"
+        "size": "12 Meter"
     },
     { 
         "id": 191, 
         "category": "ATK",
         "subcategory": "Correction tape", 
-        "title": "Correction Tape Joyko CT-565",
+        "title": "Correction Tape Joyko CT-565 2 pcs",
         "merk": "Joyko",
         "price": "13.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/joyko%20corr%20tape%2012m.jpg?raw=true",
         "description": "Correction tape Joyko CT-565, presisi dan mudah digunakan.",
         "color": "Default",
-        "size": "CT-565"
+        "size": "6 Meter x 2"
     },
     { 
         "id": 192, 
@@ -2298,10 +2298,10 @@
         "title": "Correction Tape Micro Star MS-7168",
         "merk": "Micro Star",
         "price": "9.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/micro%2030%20quality%20roller%20corr%20tape.jpg?raw=true",
         "description": "Correction tape Micro Star MS-7168, desain elegan dan presisi tinggi.",
         "color": "Default",
-        "size": "MS-7168"
+        "size": "30 Meter"
     },
     { 
         "id": 193, 
@@ -2310,7 +2310,7 @@
         "title": "Correction Tape Xiu Boss No.647",
         "merk": "Xiu Boss",
         "price": "5.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/xiu%20boss%20correction%20tape%20no%20647.jpg?raw=true",
         "description": "Correction tape Xiu Boss No.647, solusi cepat dan akurat.",
         "color": "Default",
         "size": "No.647"
@@ -2730,7 +2730,7 @@
     "title": "Loose Leaf + Divider A5",
     "merk": "Kenko",
     "price": "5.000",
-    "image": "",
+    "image": "https://github.com/injanisgg/image/blob/master/atk/Loose%20Leaf%20Kenko%20A5%2050s.jpg?raw=true",
     "description": "Loose leaf A5 dengan divider, ideal untuk menyusun dokumen dan catatan dengan rapi. Tersedia dalam ukuran A5, sangat praktis untuk digunakan di sekolah atau kantor.",
     "color": "Default",
     "size": "A5"
@@ -2739,10 +2739,10 @@
     "id": 229,
     "category": "Kertas",
     "subcategory": "Loose leaf",
-    "title": "Koala A5 50 Sheets",
-    "merk": "Koala",
+    "title": "Kenko A5 50 Sheets",
+    "merk": "Kenko",
     "price": "4.500",
-    "image": "",
+    "image": "https://github.com/injanisgg/image/blob/master/atk/Loose%20Leaf%20Kenko%20A5%2050s.jpg?raw=true",
     "description": "Koala A5, 50 lembar, kertas berkualitas tinggi yang cocok untuk mencetak dokumen, catatan, dan tugas sekolah. Ukuran A5 membuatnya mudah dibawa.",
     "color": "Default",
     "size": "A5"
@@ -2802,7 +2802,7 @@
   "title": "Kenko B5 100 Sheets",
   "merk": "Kenko",
   "price": "14.000",
-  "image": "",
+  "image": "https://github.com/injanisgg/image/blob/master/atk/Loose%20Leaf%20Kenko%20B5%20100s.jpg?raw=true",
   "description": "Kenko B5, 100 lembar, kertas berkualitas tinggi yang ideal untuk mencetak dokumen, catatan, dan tugas sekolah. Ukuran B5 membuatnya praktis untuk dibawa ke mana saja.",
   "color": "Default",
   "size": "B5"
@@ -2814,7 +2814,7 @@
   "title": "Kenko A5 50 Sheets",
   "merk": "Kenko",
   "price": "4.500",
-  "image": "",
+  "image": "https://github.com/injanisgg/image/blob/master/atk/Loose%20Leaf%20Kenko%20A5%2050s.jpg?raw=true",
   "description": "Kenko A5, 50 lembar, kertas berkualitas tinggi yang cocok untuk mencetak dokumen, catatan, dan tugas sekolah. Ukuran A5 membuatnya mudah dibawa dan digunakan.",
   "color": "Default",
   "size": "A5"
@@ -2826,7 +2826,7 @@
   "title": "Joyko B5 50 Sheets",
   "merk": "Joyko",
   "price": "7.000",
-  "image": "",
+  "image": "https://github.com/injanisgg/image/blob/master/atk/Loose%20Leaf%20Joyko%20B5%2050s.jpg?raw=true",
   "description": "Joyko B5, 50 lembar, kertas berkualitas tinggi yang ideal untuk mencetak dokumen, catatan, dan tugas sekolah. Ukuran B5 membuatnya praktis untuk digunakan.",
   "color": "Default",
   "size": "B5"
@@ -2838,7 +2838,7 @@
   "title": "Joyko A5 100 Sheets",
   "merk": "Joyko",
   "price": "8.500",
-  "image": "",
+  "image": "https://github.com/injanisgg/image/blob/master/atk/Loose%20Leaf%20Joyko%20A5%20100s.jpg?raw=true",
   "description": "Joyko A5, 100 lembar, kertas berkualitas tinggi yang cocok untuk mencetak dokumen, catatan, dan tugas sekolah. Ukuran A5 membuatnya mudah dibawa dan digunakan.",
   "color": "Default",
   "size": "A5"
@@ -4854,7 +4854,7 @@
         "title": "Kotak Pensil Magnet Sedang",
         "merk": "No Merk",
         "price": "22.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/tempat%20pensil%20anak%20karakter.jpg?raw=true",
         "description": "Kotak pensil dengan magnet sedang, praktis dan kuat.",
         "color": "Hitam",
         "size": "Sedang"
@@ -6342,7 +6342,7 @@
         "title": "No Merk Karakter",
         "merk": "No Merk",
         "price": "2.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/dongyangserutan%20beruang.jpg?raw=true",
         "description": "Serutan dengan desain karakter.",
         "color": "",
         "size": "Karakter"
@@ -6702,10 +6702,10 @@
         "title": "Penghapus Morandi Color",
         "merk": "Joyko",
         "price": "2.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/eraser%20joyko%20long%20pastel.jpg?raw=true",
         "description": "Penghapus dengan warna menarik, cocok untuk keperluan sekolah dan kantor.",
         "color": "Multiple",
-        "size": ""
+        "size": "Sedang"
     },
     {
         "id": 560,
@@ -6714,7 +6714,7 @@
         "title": "Penghapus 526-B40P (White)",
         "merk": "Joyko",
         "price": "2.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/eraser%20joyko%20white.jpg?raw=true",
         "description": "Penghapus berwarna putih dengan kualitas tinggi.",
         "color": "White",
         "size": ""
@@ -6726,7 +6726,7 @@
         "title": "Penghapus 526-B40P (Black)",
         "merk": "Joyko",
         "price": "2.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/eraser%20joyko%20black.jpg?raw=true",
         "description": "Penghapus berwarna hitam untuk keperluan menggambar atau menulis.",
         "color": "Black",
         "size": ""
@@ -6735,13 +6735,13 @@
         "id": 562,
         "category": "ATK",
         "subcategory": "Penghapus",
-        "title": "Penghapus 526-B20 (White)",
+        "title": "Joyko penghapus 526-B20",
         "merk": "Joyko",
         "price": "2.500",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/eraser%20joyko%20multi%20colors.jpg?raw=true",
         "description": "Penghapus berkualitas tinggi dengan warna putih.",
-        "color": "White",
-        "size": ""
+        "color": "Beragam warna",
+        "size": "Standar"
     },
     {
         "id": 563,
@@ -7206,7 +7206,7 @@
         "title": "Joyko HD 10CL",
         "merk": "Joyko",
         "price": "10.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/Stapler%20Joyko%20HD-10CL.jpg?raw=true",
         "description": "Stapler Joyko HD 10CL, untuk kebutuhan sehari-hari.",
         "color": "Black",
         "size": "Standard"
@@ -7218,7 +7218,7 @@
         "title": "Joyko HD 10M",
         "merk": "Joyko",
         "price": "8.000",
-        "image": "",
+        "image": "https://github.com/injanisgg/image/blob/master/atk/Stapler%20Joyko%20HD-10M%20(Mini).jpg?raw=true",
         "description": "Stapler Joyko HD 10M, mudah digunakan untuk keperluan kantor.",
         "color": "Black",
         "size": "Standard"
