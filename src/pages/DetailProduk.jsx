@@ -23,13 +23,13 @@ function DetailProduk() {
 
   const handleBack = () => {
     navigate(-1);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // scroll down to item
   const scrollDown = () => {
-    window.scrollTo({top: 470, behavior:"smooth"})
-  }
+    window.scrollTo({ top: 470, behavior: "smooth" });
+  };
 
   return (
     <div>
@@ -41,36 +41,46 @@ function DetailProduk() {
         <i className="fa-solid fa-arrow-left"></i>
       </button>
       {/* content detail */}
-      <div>
-        <div className="flex mt-32 gap-20">
-          <div className="relative">
-            <img
-              src={product?.image || DetailImg}
-              alt={product?.title}
-              className="size-96 object-cover ml-40"
-            />
+
+      <div className="flex mt-32 gap-20 min-w-screen justify-evenly items-center">
+        <div className="relative">
+          <img
+            src={product?.image || DetailImg}
+            alt={product?.title}
+            className="size-96 object-cover ml-40"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
+          <h2 className="text-xl font-bold text-left">{product?.title}</h2>
+          <p className="xl:w-[33rem] text-justify">{product?.description}</p>
+          <h2 className="text-2xl font-bold text-left">Rp. {product?.price}</h2>
+          <p className="xl:w-[33rem] text-sm text-justify">
+            *Harga yang tertera dapat berubah-ubah, namun tidak jauh dari harga
+            yang tertera. Anda bisa mengetahui harga pastinya dengan datang ke
+            toko ATK HK JAYA
+          </p>
+          <div
+            className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center"
+            onClick={scrollDown}
+          >
+            <span>Spesifikasi Produk</span>
+            <i className="fa-solid fa-chevron-right"></i>
           </div>
-          <div className="flex flex-col gap-2">
-            <h2 className="text-xl font-bold text-left">{product?.title}</h2>
-            <p className="xl:w-[33rem] text-justify">{product?.description}</p>
-            <h2 className="text-2xl font-bold text-left">Rp. {product?.price}</h2>
-            <p className="xl:w-[33rem] text-sm text-justify">
-              *Harga yang tertera dapat berubah-ubah, namun tidak jauh dari harga yang tertera.
-              Anda bisa mengetahui harga pastinya dengan datang ke toko ATK HK JAYA
-            </p>
-            <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center" onClick={scrollDown}>
-              <span>Spesifikasi Produk</span>
-              <i className="fa-solid fa-chevron-right"></i>
-            </div>
-            <div className="border-b-96 border border-primary-blue rounded-full"></div>
-            <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center">
-              <a href="https://maps.app.goo.gl/UyTpzhtbTNxCySai8" target="_blank" rel="noopener noreferrer">Maps ke Toko ATK HK Jaya </a>
-              <i className="fa-solid fa-chevron-right"></i>
-            </div>
-            <div className="border-b-96 border border-primary-blue rounded-full"></div>
+          <div className="border-b-96 border border-primary-blue rounded-full"></div>
+          <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center">
+            <a
+              href="https://maps.app.goo.gl/UyTpzhtbTNxCySai8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Maps ke Toko ATK HK Jaya{" "}
+            </a>
+            <i className="fa-solid fa-chevron-right"></i>
           </div>
+          <div className="border-b-96 border border-primary-blue rounded-full"></div>
         </div>
       </div>
+
       {/* end content detail */}
 
       {/* produk spesification */}
@@ -114,4 +124,4 @@ function DetailProduk() {
   );
 }
 
-export default DetailProduk
+export default DetailProduk;

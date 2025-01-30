@@ -111,7 +111,7 @@ function Produk({ headTitle, categoryName }) {
         {/* End Filter */}
 
         {/* List Produk */}
-        <div className="grid grid-cols-4 grid-rows-7 gap-5">
+        <div className="grid grid-cols-4 grid-rows-7 gap-5 w-full">
           {/* mapping product */}
           {displayedProducts.length > 0 ? (
             displayedProducts.map((product) => (
