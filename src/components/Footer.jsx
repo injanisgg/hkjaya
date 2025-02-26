@@ -23,46 +23,48 @@ function Footer() {
   };
 
   return (
-    <div className="flex flex-col">
-      <div className="w-full bg-slate-100 p-5">
-        <div className="flex justify-around items-center">
-          <div className="flex flex-col">
-            <img src={LogoFooter} alt="HK Jaya logo" className="xl:w-48 lg:w-40" />
-            <p className="font-bold text-lg text-left text-primary-blue pt-2">
-              Semua Ada Semua Murah
-            </p>
-            <p className="text-left text-primary-blue">
-              Jl. Taman Siswa No.28, Sekaran, Kec. Gn. Pati, <br />
-              Kota Semarang, Jawa Tengah 50229
-            </p>
-          </div>
-          <div className="flex flex-col text-primary-blue text-left gap-3">
-            <p className="font-bold text-lg">Kontak Kami</p>
+    <div className="w-full bg-slate-100 py-8">
+      <div className="flex flex-col items-center justify-center gap-5">
+        <div className="flex flex-col items-center">
+          <img src={LogoFooter} alt="HK Jaya logo" className="w-20" />
+          <p className="font-bold text-lg text-center text-primary-blue pt-2">
+            Semua Ada Semua Murah
+          </p>
+          <p className="text-center text-primary-blue">
+            Jl. Taman Siswa No.28, Sekaran, Kec. Gn. Pati, <br />
+            Kota Semarang, Jawa Tengah 50229
+          </p>
+        </div>
+        <div className="flex flex-col items-center text-primary-blue text-left gap-3">
+          <p className="font-bold text-lg">Kontak Kami</p>
+          <div className="flex justify-center gap-8">
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
-              <i className="fa-brands fa-whatsapp"></i>
-              <a href="https://wa.me/6282326292964" target="_blank" rel="noopener noreferrer">
+              <i className="text-2xl fa-brands fa-whatsapp"></i>
+              <a className="hidden" href="https://wa.me/6282326292964" target="_blank" rel="noopener noreferrer">
                 +62 823-2629-2964
               </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
-              <i className="fa-brands fa-instagram"></i>
-              <a href="https://instagram.com/hkjayastationery" target="_blank" rel="noopener noreferrer">
+              <i className="text-2xl fa-brands fa-instagram"></i>
+              <a className="hidden" href="https://instagram.com/hkjayastationery" target="_blank" rel="noopener noreferrer">
                 @hkjayastationery
               </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
-              <i className="fa-brands fa-tiktok"></i>
-              <a href="https://www.tiktok.com/@hk.jaya.stationery" target="_blank" rel="noopener noreferrer">
+              <i className="text-2xl fa-brands fa-tiktok"></i>
+              <a className="hidden" href="https://www.tiktok.com/@hk.jaya.stationery" target="_blank" rel="noopener noreferrer">
                 @hk.jaya.stationery
               </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
-              <i className="fa-solid fa-location-dot"></i>
-              <a href="https://maps.app.goo.gl/gJhUPzyjMPCPpVLYA" target="_blank" rel="noopener noreferrer">
+              <i className="text-2xl fa-solid fa-location-dot"></i>
+              <a className="hidden" href="https://maps.app.goo.gl/gJhUPzyjMPCPpVLYA" target="_blank" rel="noopener noreferrer">
                 Lihat lokasi toko
               </a>
             </div>
           </div>
+        </div>
+        <div className="flex gap-6">
           <div className="flex flex-col text-primary-blue text-left gap-3">
             <p className="font-bold text-lg">Kategori</p>
             <div
@@ -115,7 +117,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full h-16 bg-primary-blue flex justify-between px-20 py-8 text-white items-center">
+      <div className="w-full text-sm bg-primary-blue flex flex-col justify-between gap-5 px-5 py-8 mt-5 text-white items-center">
         <p>&#169; Copyright Sugini Injani 2025. All Right Reserved</p>
         <div className="flex items-center gap-4">
           <p>Kami menerima pembayaran dengan</p>

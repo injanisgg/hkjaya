@@ -2,14 +2,18 @@ import React from 'react'
 
 function HeaderPicture({picture, alt, textTop, textBottom, CustomButton}) {
   return (
-    <div className='z-0'>
-        <div className='relative'>
+    <div className='w-full'>
+        <div className='relative h-60'>
             {/* header pict main */}
-            <img src={picture} alt={alt} className='opacity-60' />
+            <img 
+                src={picture} 
+                alt={alt} 
+                className='absolute inset-0 w-full h-full object-cover opacity-60 z-0' 
+            />
             {/* end header pict main */}
 
             {/* content */}
-            <div className="flex flex-col text-4xl font-bold text-primary-blue text-center items-center gap-5 z-10 absolute inset-y-44 inset-x-10">
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-2xl font-bold text-primary-blue gap-5 z-10">
                 <span>{textTop}</span>
                 <span>{textBottom}</span>
                 {CustomButton && <CustomButton/>}
@@ -20,4 +24,4 @@ function HeaderPicture({picture, alt, textTop, textBottom, CustomButton}) {
   )
 }
 
-export default HeaderPicture
+export default HeaderPicture;
