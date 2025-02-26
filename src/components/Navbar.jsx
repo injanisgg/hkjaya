@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import NavLogo from '../img/logo-navbar.png';
 import Search from './Search';
 
+
 function Navbar() {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
