@@ -23,7 +23,7 @@ function Footer() {
   };
 
   return (
-    <div className="w-full bg-slate-100 py-8 pb-8 lg:pb-0">
+    <div className="w-full bg-slate-100 pb-20 lg:pb-0">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-10">
         <div className="flex flex-col items-center">
           <img src={LogoFooter} alt="HK Jaya logo" className="w-20" />

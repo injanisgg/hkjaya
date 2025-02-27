@@ -38,7 +38,7 @@ function Navbar({ onFilterToggle }) {
         {/* navbar lg dan xl */}
         <div className='px-4'>
             <div className="fixed top-0 left-0 right-0 z-20 lg:z-50">
-                <div className="flex items-center p-2 gap-5 lg:gap-10 bg-white shadow-below">
+                <div className="flex items-center p-2 gap-3 lg:gap-10 bg-white shadow-below">
                     <img src={NavLogo} alt="Logo ATK HK Jaya" className='flex-none w-12 md:w-14 lg:w-16 xl:w-20 '/>
                     <nav className='hidden lg:flex lg:gap-6 items-center xl:gap-10'>
                         <NavLink 
