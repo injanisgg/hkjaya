@@ -124,7 +124,7 @@ function Produk({ headTitle, categoryName }) {
             displayedProducts.map((product) => (
               <div
               key={product.id}
-              className="flex flex-col hover:cursor-pointer gap-2 text-left transition ease-in-out delay-100 hover:-translate-y-2"
+              className="flex flex-col hover:cursor-pointer gap-2 text-left transition ease-in-out delay-100 lg:hover:-translate-y-2"
               onClick={() => redirectToDetail(product.id)}
             >
               <div className="relative">

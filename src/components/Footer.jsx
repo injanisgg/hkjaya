@@ -23,7 +23,7 @@ function Footer() {
   };
 
   return (
-    <div className="w-full bg-slate-100 py-8">
+    <div className="w-full bg-slate-100 py-8 pb-16">
       <div className="flex flex-col items-center justify-center gap-5">
         <div className="flex flex-col items-center">
           <img src={LogoFooter} alt="HK Jaya logo" className="w-20" />
@@ -118,7 +118,7 @@ function Footer() {
         </div>
       </div>
       <div className="w-full text-sm bg-primary-blue flex flex-col-reverse justify-between gap-5 px-5 py-8 mt-5 text-white items-center">
-        <p>&#169; Copyright Sugini Injani 2025. All Right Reserved</p>
+        <p>&#169; Copyright ATK HK Jaya 2025. All Right Reserved</p>
         <div className="flex flex-col items-center gap-4">
           <p>Kami menerima pembayaran dengan</p>
           <div className="flex gap-8">
