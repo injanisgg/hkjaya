@@ -47,7 +47,7 @@ function Beranda() {
     }, []);
 
   return (
-    <div className='pb-12 lg:pb-0'>
+    <div className=''>
         <div className={`transition-opacity duration-500 ${show ? 'opacity-100' : 'opacity-0'}`}>
         <Navbar/>
         <HeaderPicture 
