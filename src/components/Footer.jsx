@@ -117,17 +117,19 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full text-sm bg-primary-blue flex flex-col justify-between gap-5 px-5 py-8 mt-5 text-white items-center">
+      <div className="w-full text-sm bg-primary-blue flex flex-col-reverse justify-between gap-5 px-5 py-8 mt-5 text-white items-center">
         <p>&#169; Copyright Sugini Injani 2025. All Right Reserved</p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col items-center gap-4">
           <p>Kami menerima pembayaran dengan</p>
-          <div className="flex flex-col text-center">
-            <i className="fa-solid fa-money-bill-wave"></i>
-            <p>Tunai</p>
-          </div>
-          <div className="flex flex-col text-center">
-            <i className="fa-solid fa-qrcode"></i>
-            <p>Qris</p>
+          <div className="flex gap-8">
+            <div className="flex flex-col text-center">
+              <i className="fa-solid fa-money-bill-wave"></i>
+              <p>Tunai</p>
+            </div>
+            <div className="flex flex-col text-center">
+              <i className="fa-solid fa-qrcode"></i>
+              <p>Qris</p>
+            </div>
           </div>
         </div>
       </div>

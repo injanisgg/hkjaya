@@ -4,6 +4,7 @@ import Filters from "./Filters";
 import ComingSoon from "../img/comingsoon.png";
 import { productCategory, updateSelectedFilters } from "../redux/actions";
 import { useNavigate, useParams } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Produk({ headTitle, categoryName }) {
   const dispatch = useDispatch();
@@ -21,6 +22,9 @@ function Produk({ headTitle, categoryName }) {
 
   // state untuk menampilkan data dari filter atau display
   const [isFilterApplied, setIsFilterApplied] = useState(false);
+
+  // state untuk membuka filter pada mobile 
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   // mengambil data produk berdasar kategori
   useEffect(() => {
@@ -97,21 +101,24 @@ function Produk({ headTitle, categoryName }) {
   } 
 
   return (
-    <div className="mb-20">
+    <div className="mb-20 mx-2">
+      {/* filter mobile */}
+      <Navbar onFilterToggle={() => setIsFilterOpen(true)}/>
+      <Filters title={"Merk"} content={categoryName} isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />
       {/* Title */}
       <h1 className="text-2xl font-bold text-center py-5">{headTitle}</h1>
       {/* End Title */}
 
-      <div className="flex gap-5 mx-20">
-        {/* Filter */}
-        <div className="flex flex-col gap-5">
+      <div className="lg:flex lg:gap-5">
+        {/* Filter lg dan xl */}
+        <div className="lg:flex lg:flex-col lg:gap-5">
           <Filters title={"Kategori"} content={categoryName} />
           <Filters title={"Merk"} content={categoryName} />
         </div>
         {/* End Filter */}
 
         {/* List Produk */}
-        <div className="grid grid-cols-4 grid-rows-7 gap-5 w-full">
+        <div className="grid grid-cols-2 lg:grid-cols-4 grid-rows-7 gap-5 w-full">
           {/* mapping product */}
           {displayedProducts.length > 0 ? (
             displayedProducts.map((product) => (
@@ -124,7 +131,7 @@ function Produk({ headTitle, categoryName }) {
                 <img
                   src={product.image || ComingSoon}
                   alt={product.title}
-                  className="xl:w-52 xl:h-52 rounded-xl object-cover border-[1.3px] border-primary-blue"
+                  className="w-44 h-44 xl:w-52 xl:h-52 rounded-xl object-cover border-[1.3px] border-primary-blue"
                 />
               </div>
               <div className="flex gap-2">
@@ -136,15 +143,15 @@ function Produk({ headTitle, categoryName }) {
                 </p>
               </div>
               <p className="font-bold text-base">
-                {product.title.length > 20 ? `${product.title.slice(0, 20)}...` : product.title}
+                {product.title.length > 15 ? `${product.title.slice(0, 15)}...` : product.title}
               </p>
               <p className="xl:w-52 text-sm">
-                {product.description.length > 40
-                  ? `${product.description.slice(0, 40)}...`
+                {product.description.length > 35
+                  ? `${product.description.slice(0, 35)}...`
                   : product.description}
               </p>
               <p className="font-bold text-lg">Rp. {product.price}</p>
-              <button className="rounded-xl bg-primary-blue text-sm text-white xl:w-52 py-2" onClick={() => redirectToDetail(product.id)}>
+              <button className="rounded-xl bg-primary-blue text-sm text-white w-40 xl:w-52 py-2" onClick={() => redirectToDetail(product.id)}>
                 Lihat Produk
               </button>
             </div>
@@ -159,7 +166,7 @@ function Produk({ headTitle, categoryName }) {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center gap-2 mt-10 ml-52">
+      <div className="flex flex-wrap justify-center gap-2 mt-10 lg:ml-52">
         <button
           className="px-3 py-1 bg-gray-300 rounded-md"
           onClick={() => changePage(currentPage - 1)}

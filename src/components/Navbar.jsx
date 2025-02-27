@@ -11,18 +11,18 @@ import {
     faToolbox as Tools
 } from '@fortawesome/free-solid-svg-icons';
 
-function Navbar() {
+function Navbar({ onFilterToggle }) {
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const navigate = useNavigate();
   const location = useLocation();
 
   const tabs = [
-    { id: 'home', label: 'Home', icon: Home, path: '/' },
-    { id: 'art', label: 'Art', icon: Art, path: '/alatseni' },
-    { id: 'paper', label: 'Paper', icon: Paper, path: '/kertas' },
-    { id: 'atk', label: 'Atk', icon: ATK, path: '/atk' },
-    { id: 'tools', label: 'Tools', icon: Tools, path: '/peralatan' }
+    { id: 'home', label: 'Beranda', icon: Home, path: '/' },
+    { id: 'art', label: 'Seni', icon: Art, path: '/alatseni' },
+    { id: 'paper', label: 'Kertas', icon: Paper, path: '/kertas' },
+    { id: 'atk', label: 'ATK', icon: ATK, path: '/atk' },
+    { id: 'tools', label: 'Peralatan', icon: Tools, path: '/peralatan' }
   ]
 
   // Fungsi untuk menangani navigasi dengan delay
@@ -38,9 +38,9 @@ function Navbar() {
         {/* navbar lg dan xl */}
         <div className='px-4'>
             <div className="fixed top-0 left-0 right-0 z-20">
-                <div className="hidden lg:flex items-center justify-around py-2 bg-white shadow-below">
-                    <img src={NavLogo} alt="Logo ATK HK Jaya" className='xl:w-16 '/>
-                    <nav className='flex items-center xl:gap-10'>
+                <div className="flex items-center justify-around p-2 bg-white shadow-below">
+                    <img src={NavLogo} alt="Logo ATK HK Jaya" className='w-12 xl:w-16 '/>
+                    <nav className='hidden lg:flex items-center xl:gap-10'>
                         <NavLink 
                             to='/' 
                             onClick={() => handleNavigation('/')}
@@ -79,9 +79,14 @@ function Navbar() {
                         
                     </nav>
                     <Search/>
-                    <NavLink to='https://maps.app.goo.gl/UyTpzhtbTNxCySai8' target="_blank" rel="noopener noreferrer">
+                    <NavLink to='https://maps.app.goo.gl/UyTpzhtbTNxCySai8' target="_blank" rel="noopener noreferrer" className={'flex flex-col items-center gap-3'}>
                         <i className="fa-solid fa-map-location-dot fa-lg text-primary-blue"></i>
+                        <span className="text-xs">Maps</span>
                     </NavLink>
+                    <button className={`lg:hidden ${location.pathname === '/' ? 'hidden' : ''} flex flex-col items-center`} onClick={onFilterToggle}>
+                        <i className="fa-solid fa-filter"></i>
+                        <span className='text-xs'>Filter</span>
+                    </button>
                 </div>
             </div>
         </div>

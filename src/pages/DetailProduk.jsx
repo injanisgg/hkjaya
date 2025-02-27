@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectedProduct, removeSelectedProduct } from "../redux/actions";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import DetailImg from "../img/detail.jpg";
+import DetailImg from "../img/comingsoon.png";
 import { useNavigate, useParams } from "react-router-dom";
 
 function DetailProduk() {
@@ -35,19 +35,19 @@ function DetailProduk() {
     <div>
       <Navbar />
       <button
-        className="w-max py-3 px-4 rounded-full bg-white hover:border-2 border-primary-blue fixed left-8 z-10"
+        className="w-max py-3 px-4 rounded-full bg-white hover:border-2 border-primary-blue fixed left-0 top-20 lg:left-8 z-10"
         onClick={handleBack}
       >
         <i className="fa-solid fa-arrow-left"></i>
       </button>
       {/* content detail */}
 
-      <div className="flex mt-32 gap-20 min-w-screen justify-evenly items-center">
+      <div className="flex flex-col gap-5 mx-5 mt-20 lg:mt-32 lg:gap-20 lg:min-w-screen justify-evenly items-center">
         <div className="relative">
           <img
             src={product?.image || DetailImg}
             alt={product?.title}
-            className="size-96 object-cover ml-40"
+            className="size-96 object-cover lg:ml-40"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -60,14 +60,14 @@ function DetailProduk() {
             toko ATK HK JAYA
           </p>
           <div
-            className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center"
+            className="hidden mt-1 lg:flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center"
             onClick={scrollDown}
           >
             <span>Spesifikasi Produk</span>
             <i className="fa-solid fa-chevron-right"></i>
           </div>
-          <div className="border-b-96 border border-primary-blue rounded-full"></div>
-          <div className="mt-1 flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center">
+          <div className="hidden lg:border-b-96 border border-primary-blue rounded-full"></div>
+          <div className="hidden mt-1 lg:flex justify-between text-primary-blue hover:font-bold hover:cursor-pointer items-center">
             <a
               href="https://maps.app.goo.gl/UyTpzhtbTNxCySai8"
               target="_blank"
@@ -77,14 +77,14 @@ function DetailProduk() {
             </a>
             <i className="fa-solid fa-chevron-right"></i>
           </div>
-          <div className="border-b-96 border border-primary-blue rounded-full"></div>
+          <div className="hidden lg:border-b-96 border border-primary-blue rounded-full"></div>
         </div>
       </div>
 
       {/* end content detail */}
 
       {/* produk spesification */}
-      <div className="ml-40 my-20 mr-28 flex flex-col gap-3">
+      <div className="m-5 lg:ml-40 lg:my-20 lg:mr-28 flex flex-col gap-3">
         <h1 className="text-xl text-primary-blue font-bold text-left mt-10">
           Spesifikasi Produk
         </h1>

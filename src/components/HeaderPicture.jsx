@@ -2,7 +2,7 @@ import React from 'react'
 
 function HeaderPicture({picture, alt, textTop, textBottom, CustomButton}) {
   return (
-    <div className='w-full'>
+    <div className='w-full pt-12'>
         <div className='relative h-60'>
             {/* header pict main */}
             <img 
@@ -13,7 +13,7 @@ function HeaderPicture({picture, alt, textTop, textBottom, CustomButton}) {
             {/* end header pict main */}
 
             {/* content */}
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-2xl font-bold text-primary-blue gap-5 z-10">
+            <div className="absolute inset-0 flex flex-col justify-center text-center items-center text-2xl font-bold text-primary-blue lg:gap-5 z-10">
                 <span>{textTop}</span>
                 <span>{textBottom}</span>
                 {CustomButton && <CustomButton/>}
