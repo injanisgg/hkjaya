@@ -151,7 +151,7 @@ function Produk({ headTitle, categoryName }) {
                   : product.description}
               </p>
               <p className="font-bold text-lg">Rp. {product.price}</p>
-              <button className="rounded-xl bg-primary-blue text-sm text-white w-40 xl:w-52 py-2" onClick={() => redirectToDetail(product.id)}>
+              <button className="rounded-xl bg-primary-blue text-sm text-white xl:w-52 py-2" onClick={() => redirectToDetail(product.id)}>
                 Lihat Produk
               </button>
             </div>
