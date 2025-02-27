@@ -2,7 +2,7 @@ import React from 'react'
 
 function HeaderPicture({picture, alt, textTop, textBottom, CustomButton}) {
   return (
-    <div className='w-full pt-12'>
+    <div className='w-full pt-12 lg:pt-20'>
         <div className='relative h-60'>
             {/* header pict main */}
             <img 

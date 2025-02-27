@@ -23,8 +23,8 @@ function Footer() {
   };
 
   return (
-    <div className="w-full bg-slate-100 py-8 pb-16">
-      <div className="flex flex-col items-center justify-center gap-5">
+    <div className="w-full bg-slate-100 py-8 pb-8 lg:pb-0">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-10">
         <div className="flex flex-col items-center">
           <img src={LogoFooter} alt="HK Jaya logo" className="w-20" />
           <p className="font-bold text-lg text-center text-primary-blue pt-2">
@@ -37,34 +37,34 @@ function Footer() {
         </div>
         <div className="flex flex-col items-center text-primary-blue text-left gap-3">
           <p className="font-bold text-lg">Kontak Kami</p>
-          <div className="flex justify-center gap-8">
+          <div className="flex lg:flex-col justify-center gap-8 lg:gap-3">
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
-              <i className="text-2xl fa-brands fa-whatsapp"></i>
-              <a className="hidden" href="https://wa.me/6282326292964" target="_blank" rel="noopener noreferrer">
+              <i className="text-2xl lg:text-base fa-brands fa-whatsapp"></i>
+              <a className="hidden lg:block" href="https://wa.me/6282326292964" target="_blank" rel="noopener noreferrer">
                 +62 823-2629-2964
               </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
-              <i className="text-2xl fa-brands fa-instagram"></i>
-              <a className="hidden" href="https://instagram.com/hkjayastationery" target="_blank" rel="noopener noreferrer">
+              <i className="text-2xl lg:text-base fa-brands fa-instagram"></i>
+              <a className="hidden lg:block" href="https://instagram.com/hkjayastationery" target="_blank" rel="noopener noreferrer">
                 @hkjayastationery
               </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
-              <i className="text-2xl fa-brands fa-tiktok"></i>
-              <a className="hidden" href="https://www.tiktok.com/@hk.jaya.stationery" target="_blank" rel="noopener noreferrer">
+              <i className="text-2xl lg:text-base fa-brands fa-tiktok"></i>
+              <a className="hidden lg:block" href="https://www.tiktok.com/@hk.jaya.stationery" target="_blank" rel="noopener noreferrer">
                 @hk.jaya.stationery
               </a>
             </div>
             <div className="flex gap-2 items-center hover:cursor-pointer hover:underline">
-              <i className="text-2xl fa-solid fa-location-dot"></i>
-              <a className="hidden" href="https://maps.app.goo.gl/gJhUPzyjMPCPpVLYA" target="_blank" rel="noopener noreferrer">
+              <i className="text-2xl lg:text-base fa-solid fa-location-dot"></i>
+              <a className="hidden lg:block" href="https://maps.app.goo.gl/gJhUPzyjMPCPpVLYA" target="_blank" rel="noopener noreferrer">
                 Lihat lokasi toko
               </a>
             </div>
           </div>
         </div>
-        <div className="flex gap-6">
+        <div className="flex gap-6 lg:gap-10">
           <div className="flex flex-col text-primary-blue text-left gap-3">
             <p className="font-bold text-lg">Kategori</p>
             <div
@@ -117,9 +117,9 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full text-sm bg-primary-blue flex flex-col-reverse justify-between gap-5 px-5 py-8 mt-5 text-white items-center">
+      <div className="w-full text-sm bg-primary-blue flex flex-col-reverse lg:flex-row justify-between gap-5 px-5 py-8 mt-5 text-white items-center">
         <p>&#169; Copyright ATK HK Jaya 2025. All Right Reserved</p>
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col lg:flex-row items-center gap-4">
           <p>Kami menerima pembayaran dengan</p>
           <div className="flex gap-8">
             <div className="flex flex-col text-center">

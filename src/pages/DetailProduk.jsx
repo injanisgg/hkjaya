@@ -47,7 +47,7 @@ function DetailProduk() {
           <img
             src={product?.image || DetailImg}
             alt={product?.title}
-            className="size-96 object-cover lg:ml-40"
+            className="size-96 md:size-[30rem] object-cover rounded-xl lg:ml-40"
           />
         </div>
         <div className="flex flex-col gap-2">

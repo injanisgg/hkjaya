@@ -37,10 +37,10 @@ function Navbar({ onFilterToggle }) {
     <div>
         {/* navbar lg dan xl */}
         <div className='px-4'>
-            <div className="fixed top-0 left-0 right-0 z-20">
-                <div className="flex items-center justify-around p-2 bg-white shadow-below">
-                    <img src={NavLogo} alt="Logo ATK HK Jaya" className='w-12 xl:w-16 '/>
-                    <nav className='hidden lg:flex items-center xl:gap-10'>
+            <div className="fixed top-0 left-0 right-0 z-20 lg:z-50">
+                <div className="flex items-center p-2 gap-5 lg:gap-10 bg-white shadow-below">
+                    <img src={NavLogo} alt="Logo ATK HK Jaya" className='flex-none w-12 md:w-14 lg:w-16 xl:w-20 '/>
+                    <nav className='hidden lg:flex lg:gap-6 items-center xl:gap-10'>
                         <NavLink 
                             to='/' 
                             onClick={() => handleNavigation('/')}
@@ -78,9 +78,9 @@ function Navbar({ onFilterToggle }) {
                         </NavLink>
                         
                     </nav>
-                    <Search/>
+                    <Search className={'flex-1'}/>
                     <NavLink to='https://maps.app.goo.gl/UyTpzhtbTNxCySai8' target="_blank" rel="noopener noreferrer" className={'flex flex-col items-center gap-3'}>
-                        <i className="fa-solid fa-map-location-dot fa-lg text-primary-blue"></i>
+                        <i className="flex-none fa-solid fa-map-location-dot fa-lg text-primary-blue"></i>
                         <span className="text-xs">Maps</span>
                     </NavLink>
                     <button className={`lg:hidden ${location.pathname === '/' ? 'hidden' : ''} flex flex-col items-center`} onClick={onFilterToggle}>

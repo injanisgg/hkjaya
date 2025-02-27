@@ -101,7 +101,7 @@ function Produk({ headTitle, categoryName }) {
   } 
 
   return (
-    <div className="mb-20 mx-2">
+    <div className="mb-20 mx-2 md:mx-5">
       {/* filter mobile */}
       <Navbar onFilterToggle={() => setIsFilterOpen(true)}/>
       <Filters title={"Merk"} content={categoryName} isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />
@@ -131,27 +131,27 @@ function Produk({ headTitle, categoryName }) {
                 <img
                   src={product.image || ComingSoon}
                   alt={product.title}
-                  className="w-44 h-44 xl:w-52 xl:h-52 rounded-xl object-cover border-[1.3px] border-primary-blue"
+                  className="w-full h-44 md:h-80 rounded-xl object-cover border-[1.3px] border-primary-blue"
                 />
               </div>
               <div className="flex gap-2">
-                <p className="text-xs text-white px-2 py-1 rounded-full w-max bg-red-600">
+                <p className="text-xs md:text-sm text-white px-2 py-1 rounded-full w-max bg-red-600">
                   {product.subcategory}
                 </p>
-                <p className="text-xs text-white px-2 py-1 rounded-full w-max bg-red-600">
+                <p className="text-xs md:text-sm text-white px-2 py-1 rounded-full w-max bg-red-600">
                   {product.merk}
                 </p>
               </div>
-              <p className="font-bold text-base">
-                {product.title.length > 15 ? `${product.title.slice(0, 15)}...` : product.title}
+              <p className="font-bold text-base md:text-lg truncate max-w-[425px] sm:max-w-[767px] md:max-w-[1023px] lg:max-w-[1279px]">
+                {product.title}
               </p>
-              <p className="xl:w-52 text-sm">
+              <p className="text-sm md:text-base truncate max-w-[425px] sm:max-w-[767px] md:max-w-[1023px] lg:max-w-[1279px]">
                 {product.description.length > 35
                   ? `${product.description.slice(0, 35)}...`
                   : product.description}
               </p>
-              <p className="font-bold text-lg">Rp. {product.price}</p>
-              <button className="rounded-xl bg-primary-blue text-sm text-white xl:w-52 py-2" onClick={() => redirectToDetail(product.id)}>
+              <p className="font-bold text-lg md:text-xl">Rp. {product.price}</p>
+              <button className="rounded-xl bg-primary-blue text-sm md:text-base text-white py-2 md:py-3" onClick={() => redirectToDetail(product.id)}>
                 Lihat Produk
               </button>
             </div>
