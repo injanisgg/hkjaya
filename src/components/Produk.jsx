@@ -101,10 +101,12 @@ function Produk({ headTitle, categoryName }) {
   } 
 
   return (
-    <div className="mb-20 mx-2 md:mx-5">
+    <div className="mb-20 mx-2 md:mx-5 lg:mx-10">
       {/* filter mobile */}
       <Navbar onFilterToggle={() => setIsFilterOpen(true)}/>
-      <Filters title={"Merk"} content={categoryName} isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />
+      <div className="lg:hidden">
+        <Filters title={"Merk"} content={categoryName} isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />
+      </div>
       {/* Title */}
       <h1 className="text-2xl font-bold text-center py-5">{headTitle}</h1>
       {/* End Title */}
@@ -118,7 +120,7 @@ function Produk({ headTitle, categoryName }) {
         {/* End Filter */}
 
         {/* List Produk */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 grid-rows-7 gap-5 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-rows-7 gap-5 w-full">
           {/* mapping product */}
           {displayedProducts.length > 0 ? (
             displayedProducts.map((product) => (
@@ -131,7 +133,7 @@ function Produk({ headTitle, categoryName }) {
                 <img
                   src={product.image || ComingSoon}
                   alt={product.title}
-                  className="w-full h-44 md:h-80 rounded-xl object-cover border-[1.3px] border-primary-blue"
+                  className="w-full h-44 md:h-52 lg:h-48 xl:h-60 rounded-xl object-cover border-[1.3px] border-primary-blue"
                 />
               </div>
               <div className="flex gap-2">

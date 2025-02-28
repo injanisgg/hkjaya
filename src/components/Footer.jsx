@@ -23,8 +23,8 @@ function Footer() {
   };
 
   return (
-    <div className="w-full bg-slate-100 pb-20 lg:pb-0">
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-10">
+    <div className="w-full bg-slate-100 pb-20 lg:py-5 lg:pb-0">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-10 xl:gap-20">
         <div className="flex flex-col items-center">
           <img src={LogoFooter} alt="HK Jaya logo" className="w-20" />
           <p className="font-bold text-lg text-center text-primary-blue pt-2">
@@ -64,7 +64,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex gap-6 lg:gap-10">
+        <div className="flex gap-6 lg:gap-10 xl:gap-20">
           <div className="flex flex-col text-primary-blue text-left gap-3">
             <p className="font-bold text-lg">Kategori</p>
             <div

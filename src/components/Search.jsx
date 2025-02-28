@@ -21,10 +21,10 @@ function Search({ className }) {
           type="text"
           value={inputSearch}
           onChange={(e) => setInputSearch(e.target.value)}
-          className="form-input text-gray-700 w-fit bg-transparent ml-10 "
+          className="form-input text-gray-700 w-full bg-transparent ml-10 border-none outline-none focus:ring-0"
           placeholder="Cari produk"
         />
-        <button type="submit" className="absolute left-3 sm:bottom-2">
+        <button type="submit" className="absolute left-3 bottom-2">
           <i className="fa-solid fa-magnifying-glass text-gray-500"></i>
         </button>
       </form>

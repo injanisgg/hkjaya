@@ -33,7 +33,7 @@ function SearchPage() {
               <img 
               src={product.image || ComingSoon} 
               alt={product.title}
-              className='w-40 h-40 xl:w-52 xl:h-52 rounded-xl object-cover border-[1.3px] border-primary-blue' />
+              className='w-40 h-40 lg:w-48 lg:h-48 xl:w-60 xl:h-60 rounded-xl object-cover border-[1.3px] border-primary-blue' />
             </div>
             <div className="flex gap-2">
               <p className="text-xs text-white px-2 py-1 rounded-full w-max bg-red-600">
@@ -46,13 +46,13 @@ function SearchPage() {
             <p className="font-bold text-base">
               {product.title.length > 15 ? `${product.title.slice(0, 15)}...` : product.title}
             </p>
-            <p className="w-40 xl:w-52 text-sm">
+            <p className="w-40 lg:w-48 xl:w-52 text-sm">
               {product.description.length > 35
                 ? `${product.description.slice(0, 35)}...`
                 : product.description}
             </p>
             <p className="font-bold text-lg">Rp. {product.price}</p>
-            <button className="rounded-xl bg-primary-blue text-sm text-white w-40 xl:w-52 py-2" onClick={() => redirectToDetail(product.id)}>
+            <button className="rounded-xl bg-primary-blue text-sm text-white w-40 lg:w-48 xl:w-60 py-2 md:py-3" onClick={() => redirectToDetail(product.id)}>
               Lihat Produk
             </button>
           </div>
